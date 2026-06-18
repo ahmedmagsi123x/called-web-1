@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meridian Media — We Don't Offer Services. We Build Authorities.</title>
   <meta name="description" content="Meridian Media turns serious real estate professionals into the most recognized, most trusted names in their market. Done-for-you content that builds authority. Book a call." />
+  <meta property="og:title" content="Meridian Media — We Build Authorities" />
+  <meta property="og:description" content="Become the name your market trusts first. Done-for-you content for real estate professionals." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -12,41 +14,60 @@
 </head>
 <body>
 
+  <div class="progress" aria-hidden="true"></div>
+
   <!-- ============ NAV ============ -->
   <header class="nav">
-    <div class="wrap nav__inner">
-      <a href="index.html" class="logo">
-        <span class="logo__mark">M</span> Meridian
-      </a>
-      <nav class="nav__links">
-        <a href="services.html">Services</a>
-        <a href="work.html">Work</a>
-        <a href="about.html">About</a>
-      </nav>
-      <div class="nav__cta">
-        <a href="contact.html" class="btn btn-primary">Book a Call</a>
-        <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="wrap">
+      <div class="nav__inner">
+        <a href="#top" class="logo"><span class="logo__mark">M</span> Meridian</a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#problem">Why us</a>
+          <a href="#services">Services</a>
+          <a href="#proof">Work</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="nav__cta">
+          <a href="#book" class="btn btn-primary"><span class="nav-book-label">Book a&nbsp;</span>Call</a>
+          <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
       </div>
     </div>
   </header>
 
-  <main>
+  <main id="top">
 
     <!-- ============ HERO — the promise ============ -->
     <section class="section hero">
-      <div class="blob blob--coral float" style="width:320px;height:320px;top:-60px;left:-80px;"></div>
-      <div class="blob blob--purple float" style="width:260px;height:260px;bottom:-80px;right:-60px;animation-delay:1.5s;"></div>
       <div class="wrap">
-        <div class="hero__grid">
-          <div class="hero__copy reveal">
-            <span class="eyebrow"><span class="dot"></span> For real estate pros who are done being the best-kept secret</span>
-            <h1 style="margin-top:22px;">Become the name your market <span class="hl">trusts first.</span></h1>
-            <p class="hero__sub lead">You close the deals nobody else can. We make sure everyone knows it — with done-for-you content that turns you into the obvious authority in your market.</p>
+        <div class="hero__card">
+          <div class="hero__glow" aria-hidden="true"></div>
+          <div class="hero__grain" aria-hidden="true"></div>
+
+          <span class="badge badge--a" aria-hidden="true">📈</span>
+          <span class="badge badge--b" aria-hidden="true">🎬</span>
+          <span class="badge badge--c" aria-hidden="true">▶️</span>
+          <span class="badge badge--d" aria-hidden="true">✨</span>
+
+          <div class="hero__top">
+            <span class="hero__eyebrow"><span class="dot"></span> Media studio for real estate</span>
+            <p class="hero__tag">Organizers of trusted, unforgettable real estate brands.</p>
+          </div>
+
+          <div class="hero__center">
+            <h1 class="hero__title" data-words>
+              <span class="word" style="transition-delay:0s">Meridian</span>
+              <span class="word stroke" style="transition-delay:.08s">Media</span>
+            </h1>
+            <p class="hero__sub">You close the deals nobody else can. We make sure everyone knows it — done-for-you content that turns you into the obvious authority in your market.</p>
+          </div>
+
+          <div class="hero__bottom">
             <div class="hero__cta">
-              <a href="contact.html" class="btn btn-primary btn-lg btn-arrow">Book your call
+              <a href="#book" class="btn btn-coral btn-lg">Book your call
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
-              <a href="work.html" class="btn btn-ghost btn-lg">See the proof</a>
+              <a href="#proof" class="btn btn-light btn-lg">See the proof</a>
             </div>
             <div class="hero__trust">
               <div class="avatars">
@@ -58,270 +79,165 @@
               <span>Built for wholesalers, investors &amp; developers who want the spotlight.</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="hero__visual reveal d2">
-            <div class="media-card card-a">
-              <div class="media-card__thumb" style="background:linear-gradient(135deg,var(--coral),var(--pink));">YOUR DEAL TOUR</div>
-              <div class="media-card__bar"><span class="play">▶</span><span class="meta">How I closed a $0 down deal</span></div>
-            </div>
-            <div class="media-card card-b">
-              <div class="media-card__thumb" style="background:linear-gradient(135deg,var(--blue),var(--purple));">ON CAMERA</div>
-              <div class="media-card__bar"><span class="play" style="background:var(--blue)">▶</span><span class="meta">Market update — 60 sec</span></div>
-            </div>
-            <div class="media-card card-c">
-              <div class="media-card__thumb" style="background:linear-gradient(135deg,var(--green),var(--yellow));height:120px;">CASE STUDY</div>
-            </div>
-            <div class="stat-bubble sb-1 float"><div class="num">+218%</div><div class="lbl">inbound leads</div></div>
-            <div class="stat-bubble sb-2 float" style="animation-delay:.8s;"><div class="num">#1</div><div class="lbl">in their market</div></div>
+    <!-- ============ STATEMENT — the big promise ============ -->
+    <section class="section statement">
+      <div class="wrap">
+        <h2 class="statement__big" data-words>Become the name your market <span class="accent">trusts first</span></h2>
+        <div class="statement__row">
+          <div class="statement__body reveal" data-d="1">
+            <p class="lead">We are a team of strategists, writers and producers building authority for serious real estate operators. You stay focused on the deal. We make you impossible to ignore — and impossible to forget.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============ MARQUEE ============ -->
-    <div class="marquee">
+    <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <span>YouTube Authority</span><span>Short-Form</span><span>AI Video</span><span>Scriptwriting</span><span>Social Media</span><span>Paid Ads</span><span>Branding</span><span>Strategy</span>
-        <span>YouTube Authority</span><span>Short-Form</span><span>AI Video</span><span>Scriptwriting</span><span>Social Media</span><span>Paid Ads</span><span>Branding</span><span>Strategy</span>
+        <span>YouTube</span><span>Short-form</span><span>AI Video</span><span>Social</span><span>Scripting</span><span>Property Video</span><span>Email</span><span>Paid Ads</span><span>Branding</span><span>Strategy</span>
+        <span>YouTube</span><span>Short-form</span><span>AI Video</span><span>Social</span><span>Scripting</span><span>Property Video</span><span>Email</span><span>Paid Ads</span><span>Branding</span><span>Strategy</span>
       </div>
     </div>
 
-    <!-- ============ THE PROBLEM — the stakes ============ -->
-    <section class="section bg-cream">
-      <div class="blob blob--yellow" style="width:240px;height:240px;top:40px;right:-60px;"></div>
+    <!-- ============ THE PROBLEM ============ -->
+    <section class="section problem" id="problem">
       <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow"><span class="dot" style="background:var(--yellow)"></span> The uncomfortable truth</span>
-          <h2 style="margin-top:18px;">You're the best in the room. So why is someone worse winning the attention?</h2>
-          <p class="lead">You out-negotiate, out-structure, and out-close them every time. But online? They look like the expert and you look invisible. Sound familiar?</p>
-        </div>
-        <div class="pain-grid">
-          <div class="pain-card reveal d1">
-            <div class="ico" style="background:var(--coral-soft)">😶‍🌫️</div>
-            <h3>Invisible where it counts</h3>
-            <p>When a seller, investor, or partner googles their next move, your name doesn't come up. The deals quietly go to whoever showed up online first.</p>
+        <div class="problem__grid">
+          <div class="reveal">
+            <span class="eyebrow"><span class="dot"></span> The cost of staying invisible</span>
+            <h2 style="margin-top:22px;">You're the best in the room. So why does nobody know your name?</h2>
+            <p class="lead" style="margin-top:20px;">You out-work, out-negotiate and out-close everyone around you. But online? You're the best-kept secret in your market — while louder, less-skilled competitors collect the attention, the trust, and the inbound deals that should be yours.</p>
+            <p style="margin-top:16px;">Every month you stay quiet is a month someone else gets remembered instead of you.</p>
           </div>
-          <div class="pain-card reveal d2">
-            <div class="ico" style="background:var(--blue-soft)">⏳</div>
-            <h3>No time, no team, no system</h3>
-            <p>You know you should post. But between closings, there's no one to script it, shoot it, edit it, or keep it consistent. So it never happens.</p>
-          </div>
-          <div class="pain-card reveal d1">
-            <div class="ico" style="background:var(--purple-soft)">📉</div>
-            <h3>Every attempt fizzled</h3>
-            <p>You tried. A few posts, a couple of videos, then life happened. Stop-start content doesn't build trust — it just reminds people you quit.</p>
-          </div>
-          <div class="pain-card reveal d2">
-            <div class="ico" style="background:var(--green-soft)">🏃</div>
-            <h3>Chasing instead of attracting</h3>
-            <p>You're still cold-calling and chasing lists while the "authority" in your market has deals, partnerships, and referrals coming to them.</p>
+          <div class="pain-list reveal" data-d="2">
+            <div class="pain"><span class="pain__x">✕</span><p>You know you should be posting content — but there's no time, no team, and no system.</p></div>
+            <div class="pain"><span class="pain__x">✕</span><p>Past attempts were inconsistent, felt awkward, and quietly fizzled out.</p></div>
+            <div class="pain"><span class="pain__x">✕</span><p>Competitors with worse deals win the trust because they show up on screen.</p></div>
+            <div class="pain"><span class="pain__x">✕</span><p>The credibility you've earned in person never makes it online where buyers look first.</p></div>
           </div>
         </div>
-        <p class="center reveal" style="margin-top:44px;font-family:var(--font-display);font-weight:700;font-size:clamp(1.2rem,2vw,1.6rem);color:var(--ink);max-width:30ch;margin-left:auto;margin-right:auto;">Every month you stay quiet, your competitor's audience — and your deals — get bigger.</p>
       </div>
     </section>
 
-    <!-- ============ THE SHIFT — the opportunity ============ -->
+    <!-- ============ THE SHIFT ============ -->
+    <section class="section shift">
+      <div class="wrap">
+        <div class="shift__grid">
+          <div class="reveal">
+            <span class="eyebrow"><span class="dot"></span> The shift</span>
+            <p class="shift__quote" style="margin-top:22px;">Deals don't go to the most qualified anymore. They go to the most <span class="hl-2">trusted</span> — and trust is now built on a screen, before you ever shake a hand.</p>
+          </div>
+          <div class="reveal" data-d="2">
+            <p class="lead">Your next seller, partner or investor is researching you right now — on YouTube, on their feed, in their inbox. The operators who win the next decade aren't the loudest. They're the ones who consistently show up, teach, and earn attention.</p>
+            <p style="margin-top:18px;">Attention is the asset. It compounds. And the best time to start building it was a year ago. The second-best time is this call.</p>
+            <a href="#book" class="btn btn-primary btn-lg" style="margin-top:28px;">Claim your attention
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MEET MERIDIAN ============ -->
+    <section class="section meet">
+      <div class="wrap">
+        <div class="meet__grid">
+          <div class="reveal">
+            <span class="eyebrow"><span class="dot"></span> Meet your guide</span>
+            <p class="position-line" style="margin-top:22px;">We don't offer services. We build authorities.</p>
+            <p class="lead" style="margin-top:24px;">We've walked this path — we built and grew a real channel from zero, and turned a documented production system into a repeatable way to make operators famous in their markets.</p>
+            <p style="margin-top:16px;">You bring the expertise and the camera presence. We bring the strategy, the scripts, the studio-grade production, and a single quality standard nothing ships below. You film. We build the authority.</p>
+          </div>
+          <div class="meet__visual reveal" data-d="2">
+            <div class="meet__chip"><span class="icon-badge bg-purple">🧭</span><div><b>A documented system</b><span>Elite content, delivered consistently — not by luck.</span></div></div>
+            <div class="meet__chip"><span class="icon-badge bg-coral">⭐</span><div><b>One quality standard</b><span>Nothing ships unless it makes you look elite.</span></div></div>
+            <div class="meet__chip"><span class="icon-badge bg-green">🤝</span><div><b>Fully done-for-you</b><span>You show up. We handle everything else.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
     <section class="section">
-      <div class="blob blob--blue" style="width:280px;height:280px;bottom:-80px;left:-90px;"></div>
       <div class="wrap">
-        <div class="split">
-          <div class="reveal">
-            <span class="eyebrow"><span class="dot" style="background:var(--blue)"></span> The shift</span>
-            <h2 style="margin-top:18px;">The game changed. Trust is now built on a screen.</h2>
-            <p class="lead" style="margin-top:18px;">The most trusted name in any market used to be whoever had been around longest. Not anymore.</p>
-            <p style="margin-top:16px;">Today, people decide who to trust <strong>before they ever speak to you</strong> — from the content they watch, the face they recognize, the expert who showed up in their feed for months. Attention has become the real asset. And attention is the one thing the deal-makers in your market aren't claiming.</p>
-            <p style="margin-top:16px;"><strong>That's the opening.</strong> While they stay invisible, you can become the one everybody already feels like they know — and trusts — before the first call.</p>
-            <a href="contact.html" class="btn btn-ink btn-arrow" style="margin-top:28px;">Claim the spotlight first
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-          <div class="split__visual reveal d2">
-            <div class="callout-card">
-              <p style="font-family:var(--font-display);font-weight:700;color:var(--ink);font-size:1.1rem;">Where trust comes from now</p>
-              <div class="trend-bar">
-                <span data-h="35" style="background:var(--coral)"></span>
-                <span data-h="50" style="background:var(--yellow)"></span>
-                <span data-h="68" style="background:var(--green)"></span>
-                <span data-h="82" style="background:var(--blue)"></span>
-                <span data-h="100" style="background:var(--purple)"></span>
-              </div>
-              <p style="margin-top:14px;font-size:.92rem;">Consistent content compounds. The longer you show up, the more it works while you sleep.</p>
-            </div>
-            <div class="callout-card" style="display:flex;align-items:center;gap:18px;">
-              <div style="font-size:2.4rem;">🎯</div>
-              <p style="margin:0;font-size:1rem;"><strong style="color:var(--ink)">Attention is the new advantage.</strong> The pro who owns the feed owns the inbound — the calls, the partnerships, the referrals.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ MEET MERIDIAN — the guide ============ -->
-    <section class="section bg-ink">
-      <div class="blob blob--coral" style="width:300px;height:300px;top:-100px;right:-80px;opacity:.18;"></div>
-      <div class="blob blob--purple" style="width:260px;height:260px;bottom:-90px;left:-70px;opacity:.22;"></div>
-      <div class="wrap">
-        <div class="split">
-          <div class="reveal">
-            <span class="eyebrow" style="background:rgba(255,255,255,.1);color:#fff;"><span class="dot"></span> Meet Meridian</span>
-            <p class="guide__quote" style="margin-top:24px;color:#fff;">We don't offer services. <em>We build authorities.</em></p>
-          </div>
-          <div class="reveal d2">
-            <p class="lead" style="color:#d6d2ef;">We've watched it happen too many times: the sharpest operator in the market stays invisible while the loudest one wins. We started Meridian to flip that.</p>
-            <p style="color:#c0bce0;margin-top:16px;">We're a content and marketing team built for one job — taking serious real estate professionals and turning them into the most recognized, most trusted name in their market. We've built the system, run the production, and grown the channel that proves it works. You bring the expertise. We build the authority around it.</p>
-            <p style="color:#c0bce0;margin-top:16px;">You stay the hero of your story. We're the guide who hands you the map, the tools, and a team that's done this before.</p>
-            <a href="about.html" class="btn btn-ghost btn-arrow" style="margin-top:26px;">Our story &amp; standard
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ HOW IT WORKS — the plan ============ -->
-    <section class="section bg-mint">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow"><span class="dot" style="background:var(--green)"></span> How it works</span>
-          <h2 style="margin-top:18px;">Becoming the authority, made effortless.</h2>
-          <p class="lead">No team to hire. No editing to learn. No blank-page panic. Three simple steps — and we carry the heavy part.</p>
+        <div class="section-head center reveal">
+          <span class="eyebrow"><span class="dot"></span> How it works</span>
+          <h2 style="margin-top:22px;">Three steps. We carry the heavy part.</h2>
+          <p class="lead">No team to hire. No gear to buy. No editing rabbit holes. Just show up and be the expert you already are.</p>
         </div>
         <div class="steps">
-          <div class="step reveal d1">
-            <div class="step__num" style="background:var(--coral)">1</div>
+          <div class="step card reveal" data-d="1">
+            <span class="step__line"></span>
+            <span class="step__num bg-coral">1</span>
             <h3>We build the strategy &amp; scripts</h3>
-            <p>We map your market, your edge, and exactly what your audience needs to hear — then hand you ready-to-shoot scripts. No guessing what to say.</p>
-            <span class="step__line">→</span>
+            <p style="margin-top:12px;">We map your market, find the topics that win attention, and hand you scripts so good you just read and react.</p>
           </div>
-          <div class="step reveal d2">
-            <div class="step__num" style="background:var(--blue)">2</div>
+          <div class="step card reveal" data-d="2">
+            <span class="step__line"></span>
+            <span class="step__num bg-blue">2</span>
             <h3>You show up &amp; film</h3>
-            <p>You do the one thing only you can do: be yourself on camera for a focused block of time. We direct it so even camera-shy pros look elite.</p>
-            <span class="step__line">→</span>
+            <p style="margin-top:12px;">A few focused hours. We direct, we guide, we make camera feel easy — even if you've never done it before.</p>
           </div>
-          <div class="step reveal d3">
-            <div class="step__num" style="background:var(--purple)">3</div>
+          <div class="step card reveal" data-d="3">
+            <span class="step__num bg-purple">3</span>
             <h3>We produce, publish &amp; grow</h3>
-            <p>We edit, package, schedule, and distribute everywhere — then optimize as it grows. You watch your authority compound while you close deals.</p>
+            <p style="margin-top:12px;">We edit, design, schedule and distribute everywhere — then optimize so your authority compounds month over month.</p>
           </div>
         </div>
-        <div class="center reveal" style="margin-top:48px;">
-          <a href="contact.html" class="btn btn-primary btn-lg btn-arrow">Start with a call
+        <div class="center" style="margin-top:44px;">
+          <a href="#book" class="btn btn-coral btn-lg">Start in three steps
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ============ WHAT WE BUILD — services as outcomes ============ -->
-    <section class="section">
-      <div class="blob blob--pink" style="width:240px;height:240px;top:0;left:-80px;"></div>
+    <!-- ============ WHAT WE BUILD (services) ============ -->
+    <section class="section services" id="services">
       <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow"><span class="dot" style="background:var(--pink)"></span> What we build for you</span>
-          <h2 style="margin-top:18px;">Not a menu of tasks. A machine that makes you the authority.</h2>
-          <p class="lead">Every piece below is one more reason your market thinks of you first. Here's what each one actually gets you.</p>
+        <div class="section-head center reveal">
+          <span class="eyebrow"><span class="dot"></span> What we build</span>
+          <h2 style="margin-top:22px;">Not a list of services. A list of what you become.</h2>
+          <p class="lead">Every piece we make has one job: turn you into the name your market knows, trusts, and calls first.</p>
         </div>
-        <div class="services-grid">
-          <div class="svc-card wash-coral reveal d1">
-            <span class="flag">FLAGSHIP</span>
-            <div class="ico">▶️</div>
-            <h3>Become the channel your market subscribes to</h3>
-            <p>Flagship YouTube content that turns strangers into people who trust you before they call.</p>
-            <span class="tag">YouTube production →</span>
-          </div>
-          <div class="svc-card wash-blue reveal d2">
-            <div class="ico">📱</div>
-            <h3>Be the face that follows them everywhere</h3>
-            <p>Short-form clips that put you in the feed daily, so you're impossible to forget.</p>
-            <span class="tag">Short-form content →</span>
-          </div>
-          <div class="svc-card wash-purple reveal d3">
-            <div class="ico">🤖</div>
-            <h3>Show up more without filming more</h3>
-            <p>AI video that multiplies your presence and keeps you visible between shoots.</p>
-            <span class="tag">AI video →</span>
-          </div>
-          <div class="svc-card wash-green reveal d1">
-            <div class="ico">💬</div>
-            <h3>Own the conversation in your market</h3>
-            <p>Hands-off social management that keeps your profiles active, sharp, and on-brand.</p>
-            <span class="tag">Social media →</span>
-          </div>
-          <div class="svc-card wash-yellow reveal d2">
-            <div class="ico">✍️</div>
-            <h3>Never stare at a blank page again</h3>
-            <p>Scripts and copy that make you sound like the expert you are — written for you.</p>
-            <span class="tag">Scripting &amp; copy →</span>
-          </div>
-          <div class="svc-card wash-pink reveal d3">
-            <div class="ico">🏠</div>
-            <h3>Make every property &amp; deal look premium</h3>
-            <p>Property and business video that sells the asset and elevates your brand at once.</p>
-            <span class="tag">Property &amp; business video →</span>
-          </div>
-          <div class="svc-card wash-blue reveal d1">
-            <div class="ico">✉️</div>
-            <h3>Stay in their inbox, top of mind</h3>
-            <p>Email that nurtures your list into ready buyers, sellers, and partners.</p>
-            <span class="tag">Email marketing →</span>
-          </div>
-          <div class="svc-card wash-coral reveal d2">
-            <div class="ico">🚀</div>
-            <h3>Pour fuel on what's already working</h3>
-            <p>Paid ads that put your best content in front of the exact people who move deals.</p>
-            <span class="tag">Paid advertising →</span>
-          </div>
-          <div class="svc-card wash-purple reveal d3">
-            <div class="ico">🎨</div>
-            <h3>Look like the most trusted name before you say a word</h3>
-            <p>Branding and design — plus the strategy tying it all together — so you look the part instantly.</p>
-            <span class="tag">Branding &amp; strategy →</span>
-          </div>
-        </div>
-        <div class="center reveal" style="margin-top:46px;">
-          <a href="services.html" class="btn btn-ink btn-arrow">See how each one works
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="svc-grid">
+          <article class="card svc reveal" data-d="1"><span class="svc__blob bg-coral"></span><span class="icon-badge bg-coral">▶️</span><h3>Become the channel your market subscribes to</h3><p>Flagship YouTube content that makes you the go-to authority people binge and trust.</p><span class="svc__feat">YouTube production</span></article>
+          <article class="card svc reveal" data-d="2"><span class="svc__blob bg-pink"></span><span class="icon-badge bg-pink">⚡</span><h3>Be the face that follows them everywhere</h3><p>Scroll-stopping short-form that keeps you top of feed on Reels, Shorts &amp; TikTok.</p><span class="svc__feat">Short-form content</span></article>
+          <article class="card svc reveal" data-d="3"><span class="svc__blob bg-blue"></span><span class="icon-badge bg-blue">🤖</span><h3>Show up more without filming more</h3><p>AI video that multiplies your presence from the footage you already gave us.</p><span class="svc__feat">AI video</span></article>
+          <article class="card svc reveal" data-d="1"><span class="svc__blob bg-green"></span><span class="icon-badge bg-green">💬</span><h3>Own the conversation in your market</h3><p>Social management that keeps your name in the room when deals get decided.</p><span class="svc__feat">Social media management</span></article>
+          <article class="card svc reveal" data-d="2"><span class="svc__blob bg-purple"></span><span class="icon-badge bg-purple">✍️</span><h3>Never stare at a blank page again</h3><p>Scripts and copy that sound like you — only sharper, clearer and more persuasive.</p><span class="svc__feat">Scriptwriting &amp; copy</span></article>
+          <article class="card svc reveal" data-d="3"><span class="svc__blob bg-yellow"></span><span class="icon-badge bg-yellow">🏠</span><h3>Make every deal look premium</h3><p>Property &amp; business video that signals quality before a word is spoken.</p><span class="svc__feat">Property &amp; business video</span></article>
+          <article class="card svc reveal" data-d="1"><span class="svc__blob bg-blue"></span><span class="icon-badge bg-blue">✉️</span><h3>Stay in their inbox, top of mind</h3><p>Email that nurtures your list until they're ready — and you're the obvious choice.</p><span class="svc__feat">Email marketing</span></article>
+          <article class="card svc reveal" data-d="2"><span class="svc__blob bg-coral"></span><span class="icon-badge bg-coral">🚀</span><h3>Pour fuel on what's already working</h3><p>Paid ads that put your best content in front of the exact people who buy.</p><span class="svc__feat">Paid advertising</span></article>
+          <article class="card svc reveal" data-d="3"><span class="svc__blob bg-purple"></span><span class="icon-badge bg-purple">🎨</span><h3>Look the most trusted before you speak</h3><p>Branding, design &amp; strategy so you look like the leader from the first glance.</p><span class="svc__feat">Branding &amp; strategy</span></article>
         </div>
       </div>
     </section>
 
     <!-- ============ THE PROOF ============ -->
-    <section class="section bg-sky">
+    <section class="section proof" id="proof">
       <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow"><span class="dot" style="background:var(--blue)"></span> The proof</span>
-          <h2 style="margin-top:18px;">We didn't read about this. We built it.</h2>
-          <p class="lead">The fastest way to know a system works is to see it work. So here's the channel we built and grew from zero — our living case study.</p>
+        <div class="section-head left reveal" style="max-width:680px;">
+          <span class="eyebrow"><span class="dot"></span> The proof</span>
+          <h2 style="margin-top:22px;">We didn't read about this. We built it.</h2>
+          <p class="lead">Our own channel is the living case study — the visible evidence the system works before we ever point it at your brand.</p>
         </div>
-        <div class="stats-row">
-          <div class="stat-box reveal d1"><div class="num"><span data-count="2.4" data-suffix="M">0</span></div><div class="lbl">views generated</div></div>
-          <div class="stat-box reveal d2"><div class="num"><span data-count="180" data-suffix="K">0</span></div><div class="lbl">subscribers grown</div></div>
-          <div class="stat-box reveal d3"><div class="num"><span data-count="218" data-suffix="%">0</span></div><div class="lbl">avg. lift in inbound</div></div>
-          <div class="stat-box reveal d4"><div class="num"><span data-count="500" data-suffix="+">0</span></div><div class="lbl">videos produced</div></div>
+        <div class="proof__stats">
+          <div class="proof__stat reveal" data-d="1"><div class="stat__num"><span data-count="2.4" data-suffix="M">0</span></div><div class="stat__label">Views generated</div></div>
+          <div class="proof__stat reveal" data-d="2"><div class="stat__num"><span data-count="68" data-suffix="K">0</span></div><div class="stat__label">Subscribers grown</div></div>
+          <div class="proof__stat reveal" data-d="3"><div class="stat__num"><span data-count="900" data-suffix="+">0</span></div><div class="stat__label">Pieces produced</div></div>
+          <div class="proof__stat reveal" data-d="4"><div class="stat__num"><span data-count="100" data-suffix="%">0</span></div><div class="stat__label">Done-for-you</div></div>
         </div>
-        <div class="proof-feature">
-          <div class="reveal">
-            <div class="channel-card">
-              <div class="channel-head">
-                <div class="ava">M</div>
-                <div><div class="name">The Meridian Channel</div><div class="sub">Built &amp; grown in-house · the standard we ship to</div></div>
-              </div>
-              <div class="channel-vids">
-                <div class="v"><div class="th" style="background:linear-gradient(135deg,var(--coral),var(--pink))">DEAL BREAKDOWN</div><div class="cap">142K views</div></div>
-                <div class="v"><div class="th" style="background:linear-gradient(135deg,var(--blue),var(--purple))">MARKET UPDATE</div><div class="cap">88K views</div></div>
-                <div class="v"><div class="th" style="background:linear-gradient(135deg,var(--green),var(--yellow))">INVESTOR Q&amp;A</div><div class="cap">211K views</div></div>
-                <div class="v"><div class="th" style="background:linear-gradient(135deg,var(--purple),var(--coral))">ON-SITE TOUR</div><div class="cap">96K views</div></div>
-              </div>
-            </div>
-          </div>
-          <div class="reveal d2">
-            <h3 style="font-size:clamp(1.4rem,2.6vw,2rem);">One standard. Nothing ships below it.</h3>
-            <p style="margin-top:16px;">Every thumbnail, every cut, every hook is held to the same bar we set on our own channel. No "good enough." No inconsistent freelancer roulette. The same elite quality, every single time — because your authority is only as strong as your worst piece of content.</p>
-            <p style="margin-top:16px;">This is what a remote team that's actually done it looks like: a documented production system that delivers, week after week, without you managing any of it.</p>
-            <a href="work.html" class="btn btn-primary btn-arrow" style="margin-top:24px;">See the full case study
+        <div class="proof__card reveal" data-d="2">
+          <div class="proof__thumb">▶️</div>
+          <div>
+            <h3 style="font-size:1.35rem;">From zero to a market-leading channel</h3>
+            <p style="margin-top:8px;">A documented build — strategy, scripts, production and distribution — taken from a blank page to a trusted, growing audience. The same playbook we run for you.</p>
+            <a href="#book" class="btn btn-coral" style="margin-top:18px;">Get this for your brand
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
@@ -330,115 +246,90 @@
     </section>
 
     <!-- ============ WHY MERIDIAN ============ -->
-    <section class="section">
-      <div class="blob blob--green" style="width:260px;height:260px;bottom:-80px;right:-80px;"></div>
+    <section class="section why">
       <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow"><span class="dot" style="background:var(--green)"></span> Why Meridian</span>
-          <h2 style="margin-top:18px;">Why not just hire a freelancer or do it yourself?</h2>
-          <p class="lead">Because a one-off editor gives you clips. We give you authority — and we own the whole thing so you don't have to.</p>
+        <div class="section-head center reveal">
+          <span class="eyebrow"><span class="dot"></span> Why Meridian</span>
+          <h2 style="margin-top:22px;">Why not a freelancer? Why not do it yourself?</h2>
+          <p class="lead">Because a random editor gives you clips. We give you authority — built on a system, held to one standard, fully off your plate.</p>
         </div>
         <div class="why-grid">
-          <div class="why-card reveal d1">
-            <div class="ico" style="background:var(--coral)">⚙️</div>
-            <h3>A documented system, not a freelancer's mood</h3>
-            <p>Our production process is built to deliver elite content consistently — not "when they get to it." Predictable, repeatable, reliable.</p>
-          </div>
-          <div class="why-card reveal d2">
-            <div class="ico" style="background:var(--blue)">🏆</div>
-            <h3>One quality standard, no exceptions</h3>
-            <p>Nothing leaves the building below the bar we set on our own channel. Your brand never takes a dip because someone cut a corner.</p>
-          </div>
-          <div class="why-card reveal d3">
-            <div class="ico" style="background:var(--purple)">🙌</div>
-            <h3>Fully done-for-you</h3>
-            <p>You show up and film. We handle strategy, scripting, editing, publishing, and growth. The only thing on your plate is being great on camera.</p>
-          </div>
+          <div class="card reveal" data-d="1"><span class="icon-badge bg-purple">⚙️</span><h3>A proven system</h3><p style="margin-top:10px;">Freelancers improvise. We run a documented production engine that delivers elite content on a schedule — consistency that actually compounds.</p></div>
+          <div class="card reveal" data-d="2"><span class="icon-badge bg-coral">⭐</span><h3>One quality standard</h3><p style="margin-top:10px;">Nothing ships below the bar. Every video, post and email is held to a single standard so you always look elite — never "good enough."</p></div>
+          <div class="card reveal" data-d="3"><span class="icon-badge bg-green">🛋️</span><h3>Truly done-for-you</h3><p style="margin-top:10px;">No managing editors, no chasing deadlines, no learning software. You show up and film. We carry strategy, production, publishing and growth.</p></div>
         </div>
       </div>
     </section>
 
     <!-- ============ TWO FUTURES ============ -->
-    <section class="section bg-lilac">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow"><span class="dot" style="background:var(--purple)"></span> Two futures</span>
-          <h2 style="margin-top:18px;">A year from now, you're one of these two people.</h2>
-          <p class="lead">The deals don't wait. The only question is who your market trusts when they're ready to move.</p>
-        </div>
-        <div class="futures">
-          <div class="future-card future--bad reveal d1">
-            <h3>😣 Without Meridian</h3>
-            <ul>
-              <li><span class="mark">✕</span> Still the best-kept secret while louder pros win the attention.</li>
-              <li><span class="mark">✕</span> Another year of "I should really post more" — and not doing it.</li>
-              <li><span class="mark">✕</span> Chasing cold leads instead of fielding warm inbound.</li>
-              <li><span class="mark">✕</span> Watching competitors' audiences — and deal flow — compound past you.</li>
-              <li><span class="mark">✕</span> Wondering what it would've become if you'd started today.</li>
-            </ul>
-          </div>
-          <div class="future-card future--good reveal d2">
-            <h3>🚀 With Meridian</h3>
-            <ul>
-              <li><span class="mark">✓</span> The recognized authority your market thinks of first.</li>
-              <li><span class="mark">✓</span> Consistent, elite content going out — without you lifting a finger.</li>
-              <li><span class="mark">✓</span> Sellers, investors &amp; partners reaching out to <em>you</em>.</li>
-              <li><span class="mark">✓</span> A growing audience that builds trust while you sleep.</li>
-              <li><span class="mark">✓</span> A brand that finally matches how good you actually are.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ FAQ / objections ============ -->
     <section class="section">
       <div class="wrap">
-        <div class="section-head reveal">
-          <span class="eyebrow"><span class="dot" style="background:var(--coral)"></span> Real questions</span>
-          <h2 style="margin-top:18px;">The doubts in the back of your mind — answered.</h2>
+        <div class="section-head center reveal">
+          <span class="eyebrow"><span class="dot"></span> Two futures</span>
+          <h2 style="margin-top:22px;">A year from now, one of these is your reality.</h2>
         </div>
-        <div class="faq">
-          <div class="faq-item reveal">
-            <button class="faq-q">Is this actually going to bring business, or is it just vanity? <span class="pm">+</span></button>
-            <div class="faq-a"><p>Vanity is posting and hoping. We build content with a job: to make the right people trust you before they call. The goal isn't views for views' sake — it's inbound leads, warmer conversations, and deals that come to you. That's why we track lift in inbound, not just likes.</p></div>
+        <div class="futures__grid">
+          <div class="future future--bad reveal" data-d="1">
+            <h3>Without us</h3>
+            <ul>
+              <li><span class="mark">✕</span> Still the best-kept secret while louder competitors get remembered.</li>
+              <li><span class="mark">✕</span> Another year of "I'll start posting soon" — and another year of silence.</li>
+              <li><span class="mark">✕</span> Chasing deals instead of having them come to you.</li>
+              <li><span class="mark">✕</span> Watching attention — and the trust it buys — go to someone else.</li>
+            </ul>
           </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">Do I have to be on camera all the time? <span class="pm">+</span></button>
-            <div class="faq-a"><p>No. We batch. You film in focused blocks — often just a few hours — and we turn that into weeks of content across every platform. We even use AI video to stretch your presence further. You're on camera far less than you'd think.</p></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">Is it worth the money? <span class="pm">+</span></button>
-            <div class="faq-a"><p>One extra deal usually pays for months of this. You're not buying videos — you're buying the authority that makes people choose you over the next guy, for years. The expensive option is staying invisible while competitors compound past you.</p></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">Will this eat the time I don't have? <span class="pm">+</span></button>
-            <div class="faq-a"><p>The opposite. The whole model is done-for-you: we handle strategy, scripts, editing, publishing, and growth. Your only commitment is showing up to film. We protect your time on purpose — you've got deals to close.</p></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">Can a remote team really make me look elite? <span class="pm">+</span></button>
-            <div class="faq-a"><p>Look at our channel — that's remote-produced to the exact standard we'd hold yours to. Distance doesn't lower quality; an undocumented process does. Ours is documented, and nothing ships below the bar.</p></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">Is content even how my kind of client is won? <span class="pm">+</span></button>
-            <div class="faq-a"><p>Whether you're wholesaling, investing, developing, or in mobile homes, your sellers, buyers, and partners are all human — and they all decide who to trust before they reach out. Content is how that trust gets built at scale, on autopilot, in your market specifically.</p></div>
+          <div class="future future--good reveal" data-d="2">
+            <h3>With Meridian</h3>
+            <ul>
+              <li><span class="mark">✓</span> The name your market thinks of first — and trusts before you meet.</li>
+              <li><span class="mark">✓</span> A consistent content engine running without stealing your time.</li>
+              <li><span class="mark">✓</span> Inbound deals, partnerships and opportunities finding you.</li>
+              <li><span class="mark">✓</span> A growing library of authority that compounds every single month.</li>
+            </ul>
+            <a href="#book" class="btn btn-coral btn-lg" style="margin-top:28px;">Choose the second future
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ FINAL CTA — the invitation ============ -->
-    <section class="section cta-band">
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq">
       <div class="wrap">
-        <div class="cta-card reveal">
-          <div class="blob blob--yellow float" style="width:200px;height:200px;top:-40px;left:-30px;background:rgba(255,255,255,.5);"></div>
-          <div class="blob blob--blue float" style="width:160px;height:160px;bottom:-30px;right:-20px;background:rgba(255,255,255,.4);animation-delay:1s;"></div>
-          <span class="eyebrow"><span class="dot"></span> The smart next move</span>
-          <h2 style="margin-top:20px;">Let's make you the name your market trusts first.</h2>
-          <p>One call. We'll map exactly how to turn your expertise into the authority that brings deals to you — and show you what the first 90 days would look like. No pressure, no jargon, no obligation.</p>
-          <a href="contact.html" class="btn btn-ink btn-lg btn-arrow">Book your call
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="section-head center reveal">
+          <span class="eyebrow"><span class="dot"></span> Honest answers</span>
+          <h2 style="margin-top:22px;">The doubts you're already thinking.</h2>
+        </div>
+        <div class="faq__list">
+          <div class="faq__item reveal"><button class="faq__q">Will this actually bring business, or is it just vanity?<span class="faq__icon">+</span></button><div class="faq__a"><p>Content is the top of your funnel, not the whole funnel. Authority earns the attention; attention earns the trust; trust is what makes a seller, investor or partner choose you over the other guy. We build for inbound and credibility — not view counts for their own sake.</p></div></div>
+          <div class="faq__item reveal"><button class="faq__q">Do I have to be on camera all the time?<span class="faq__icon">+</span></button><div class="faq__a"><p>No. We batch — a few focused hours can fuel weeks of content. We direct you the whole way, hand you scripts so you're never improvising, and use editing and AI video to multiply every minute you give us.</p></div></div>
+          <div class="faq__item reveal"><button class="faq__q">Is this worth the money?<span class="faq__icon">+</span></button><div class="faq__a"><p>One extra deal usually pays for a long stretch of this. You're not buying videos — you're buying a position as the trusted authority in your market, which keeps paying long after the content ships. We'll walk the math with you on the call.</p></div></div>
+          <div class="faq__item reveal"><button class="faq__q">Will it eat time I don't have?<span class="faq__icon">+</span></button><div class="faq__a"><p>That's the whole point of done-for-you. Your only real job is showing up to film. Strategy, scripting, editing, design, publishing and growth all live with us. You stay focused on deals.</p></div></div>
+          <div class="faq__item reveal"><button class="faq__q">Can a remote team really make me look elite?<span class="faq__icon">+</span></button><div class="faq__a"><p>Yes — because it runs on a documented system and a single quality standard, not on whoever's nearby. Distance is irrelevant when the process is dialed in. Our own channel is the proof.</p></div></div>
+          <div class="faq__item reveal"><button class="faq__q">Is content even how my kind of client is won?<span class="faq__icon">+</span></button><div class="faq__a"><p>Your next client is already searching, scrolling and watching before they ever reach out. Wholesalers, investors, developers and mobile-home operators are all won the same way now: by being the most visible, most trusted name when the moment comes.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA / BOOK ============ -->
+    <section class="section final" id="book">
+      <div class="wrap">
+        <div class="final__card reveal">
+          <span class="final__blob b1" aria-hidden="true"></span>
+          <span class="final__blob b2" aria-hidden="true"></span>
+          <h2>Let's make you the name your market trusts first.</h2>
+          <p>Book a free call. We'll map what authority looks like in your market, show you exactly how the system would work for you, and you'll leave with a clear plan — whether we work together or not.</p>
+
+          <form id="book-form" style="max-width:520px;margin:36px auto 0;display:grid;gap:14px;text-align:left;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+              <input name="name" required placeholder="Your name" style="padding:15px 18px;border-radius:var(--r-md);border:none;font:inherit;" />
+              <input name="email" type="email" required placeholder="Email" style="padding:15px 18px;border-radius:var(--r-md);border:none;font:inherit;" />
+            </div>
+            <input name="market" placeholder="Your market (e.g. Phoenix wholesaling)" style="padding:15px 18px;border-radius:var(--r-md);border:none;font:inherit;" />
+            <button type="submit" class="btn btn-light btn-lg" style="width:100%;">Book my call 🎉</button>
+            <p id="book-note" role="status" hidden style="color:#fff;background:rgba(255,255,255,.18);padding:14px 16px;border-radius:var(--r-md);"></p>
+          </form>
         </div>
       </div>
     </section>
@@ -448,43 +339,36 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="wrap">
-      <div class="footer__grid">
+      <div class="footer__top">
         <div class="footer__brand">
-          <a href="index.html" class="logo"><span class="logo__mark">M</span> Meridian</a>
-          <p>We don't offer services. We build authorities — turning serious real estate pros into the most trusted name in their market.</p>
-          <a href="contact.html" class="btn btn-primary" style="margin-top:20px;">Book a Call</a>
+          <a href="#top" class="logo"><span class="logo__mark">M</span> Meridian</a>
+          <p>We don't offer services. We build authorities — for real estate professionals who are ready to be impossible to ignore.</p>
+          <a href="#book" class="btn btn-coral">Book a call
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
-        <div>
+        <div class="footer__col">
           <h4>Explore</h4>
-          <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Book a Call</a></li>
-          </ul>
+          <a href="#problem">Why us</a>
+          <a href="#services">Services</a>
+          <a href="#proof">Work</a>
+          <a href="#faq">FAQ</a>
         </div>
-        <div>
-          <h4>What we build</h4>
-          <ul>
-            <li><a href="services.html">YouTube authority</a></li>
-            <li><a href="services.html">Short-form &amp; AI video</a></li>
-            <li><a href="services.html">Social &amp; email</a></li>
-            <li><a href="services.html">Branding &amp; strategy</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Say hello</h4>
-          <ul>
-            <li><a href="mailto:hello@meridianmedia.co">hello@meridianmedia.co</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">YouTube</a></li>
-            <li><a href="#">LinkedIn</a></li>
-          </ul>
+        <div class="footer__col">
+          <h4>Get in touch</h4>
+          <a href="mailto:hello@meridianmedia.co">hello@meridianmedia.co</a>
+          <a href="#book">Book a call</a>
+          <div class="footer__social" style="margin-top:14px;">
+            <a href="#" aria-label="YouTube">▶</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
         </div>
       </div>
+      <div class="footer__big" aria-hidden="true">MERIDIAN</div>
       <div class="footer__bottom">
-        <span>© <span data-year>2026</span> Meridian Media. Built to make you the authority.</span>
-        <span>Made with color, in the US 🇺🇸</span>
+        <span>© <span id="year">2026</span> Meridian Media. All rights reserved.</span>
+        <span>Built to make you the authority.</span>
       </div>
     </div>
   </footer>
