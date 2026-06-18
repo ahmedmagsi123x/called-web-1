@@ -1,5 +1,9 @@
 name: Deploy to GitHub Pages
 
+# One-time setup required (owner only):
+#   Repo Settings → Pages → Build and deployment → Source: "GitHub Actions"
+# After that, this workflow deploys the site automatically on every push.
+
 on:
   push:
     branches:
@@ -27,8 +31,6 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
