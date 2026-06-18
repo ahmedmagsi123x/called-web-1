@@ -1,119 +1,163 @@
-/* MERIDIAN MEDIA — interactions */
+/* =============================================================
+   MERIDIAN MEDIA — single-page interactions
+   Sticky nav · scroll reveal · word reveal · count-up ·
+   FAQ accordion · mobile menu · scroll progress · badge parallax
+   ============================================================= */
 (function () {
   "use strict";
 
-  /* Sticky nav state */
-  const nav = document.querySelector(".nav");
-  const onScroll = () => {
-    if (!nav) return;
-    nav.classList.toggle("scrolled", window.scrollY > 24);
-  };
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var $  = function (s, c) { return (c || document).querySelector(s); };
+  var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+
+  /* ---- Sticky nav state + scroll progress ---- */
+  var nav = $(".nav");
+  var progress = $(".progress");
+  function onScroll() {
+    var y = window.scrollY || window.pageYOffset;
+    if (nav) nav.classList.toggle("scrolled", y > 20);
+    if (progress) {
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (h > 0 ? (y / h) * 100 : 0) + "%";
+    }
+  }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* Mobile menu */
-  const burger = document.querySelector(".nav__burger");
-  const links = document.querySelector(".nav__links");
+  /* ---- Mobile menu ---- */
+  var burger = $(".nav__burger");
+  var links = $(".nav__links");
   if (burger && links) {
-    burger.addEventListener("click", () => links.classList.toggle("show"));
-    links.querySelectorAll("a").forEach((a) =>
-      a.addEventListener("click", () => links.classList.remove("show"))
-    );
-  }
-
-  /* Scroll reveal */
-  const revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("in");
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
-    );
-    revealEls.forEach((el) => io.observe(el));
-  } else {
-    revealEls.forEach((el) => el.classList.add("in"));
-  }
-
-  /* FAQ accordion */
-  document.querySelectorAll(".faq-item").forEach((item) => {
-    const q = item.querySelector(".faq-q");
-    const a = item.querySelector(".faq-a");
-    if (!q || !a) return;
-    q.addEventListener("click", () => {
-      const isOpen = item.classList.contains("open");
-      document.querySelectorAll(".faq-item.open").forEach((other) => {
-        if (other !== item) {
-          other.classList.remove("open");
-          other.querySelector(".faq-a").style.maxHeight = null;
-        }
+    burger.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      links.classList.toggle("show", open);
+    });
+    $$(".nav__links a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        nav.classList.remove("open");
+        links.classList.remove("show");
       });
-      item.classList.toggle("open", !isOpen);
-      a.style.maxHeight = !isOpen ? a.scrollHeight + "px" : null;
+    });
+  }
+
+  /* ---- Split headline words for reveal ---- */
+  $$("[data-words]").forEach(function (el) {
+    // Skip elements that are already manually marked up (e.g. the hero title)
+    if (el.querySelector(".word")) return;
+
+    var frag = document.createDocumentFragment();
+    Array.prototype.forEach.call(el.childNodes, function (node) {
+      if (node.nodeType === 3) {
+        // text node: wrap each word
+        node.textContent.split(/(\s+)/).forEach(function (p) {
+          if (p === "") return;
+          if (/^\s+$/.test(p)) { frag.appendChild(document.createTextNode(p)); return; }
+          var s = document.createElement("span");
+          s.className = "word";
+          s.textContent = p;
+          frag.appendChild(s);
+        });
+      } else if (node.nodeType === 1) {
+        // element (e.g. .accent): treat as one animated word, keep its classes
+        node.classList.add("word");
+        frag.appendChild(node);
+      } else {
+        frag.appendChild(node);
+      }
+    });
+    el.innerHTML = "";
+    el.appendChild(frag);
+    $$(".word", el).forEach(function (w, i) { w.style.transitionDelay = (i * 0.06) + "s"; });
+  });
+
+  /* ---- IntersectionObserver: reveals + word headlines + counters ---- */
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var t = e.target;
+      t.classList.add("in");
+      if (t.hasAttribute("data-count")) runCount(t);
+      io.unobserve(t);
+    });
+  }, { threshold: 0.18, rootMargin: "0px 0px -8% 0px" });
+
+  $$(".reveal, [data-words], [data-count]").forEach(function (el) {
+    if (reduce) { el.classList.add("in"); if (el.hasAttribute("data-count")) finishCount(el); return; }
+    io.observe(el);
+  });
+
+  /* ---- Count-up ---- */
+  function finishCount(el) {
+    el.textContent = el.getAttribute("data-count") + (el.getAttribute("data-suffix") || "");
+  }
+  function runCount(el) {
+    var target = parseFloat(el.getAttribute("data-count"));
+    var suffix = el.getAttribute("data-suffix") || "";
+    var decimals = (el.getAttribute("data-count").split(".")[1] || "").length;
+    var dur = 1500, start = null;
+    function frame(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = target * eased;
+      el.textContent = val.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + suffix;
+      if (p < 1) requestAnimationFrame(frame);
+      else el.textContent = target.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + suffix;
+    }
+    requestAnimationFrame(frame);
+  }
+
+  /* ---- FAQ accordion ---- */
+  $$(".faq__item").forEach(function (item) {
+    var q = $(".faq__q", item);
+    var a = $(".faq__a", item);
+    q.addEventListener("click", function () {
+      var open = item.classList.contains("open");
+      $$(".faq__item.open").forEach(function (o) {
+        o.classList.remove("open");
+        $(".faq__a", o).style.maxHeight = null;
+      });
+      if (!open) {
+        item.classList.add("open");
+        a.style.maxHeight = a.scrollHeight + "px";
+      }
     });
   });
 
-  /* Animate trend bars when visible */
-  const bars = document.querySelectorAll(".trend-bar span[data-h]");
-  if (bars.length && "IntersectionObserver" in window) {
-    const bo = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.style.height = e.target.dataset.h + "%";
-          bo.unobserve(e.target);
-        }
+  /* ---- Badge parallax on mouse (hero) ---- */
+  var hero = $(".hero__card");
+  if (hero && !reduce && window.matchMedia("(pointer:fine)").matches) {
+    var badges = $$(".badge", hero);
+    hero.addEventListener("mousemove", function (ev) {
+      var r = hero.getBoundingClientRect();
+      var cx = (ev.clientX - r.left) / r.width - 0.5;
+      var cy = (ev.clientY - r.top) / r.height - 0.5;
+      badges.forEach(function (b, i) {
+        var depth = (i + 1) * 9;
+        b.style.transform = "translate(" + (cx * depth) + "px," + (cy * depth) + "px)";
       });
-    }, { threshold: 0.4 });
-    bars.forEach((b) => { b.style.height = "8%"; bo.observe(b); });
+    });
+    hero.addEventListener("mouseleave", function () {
+      badges.forEach(function (b) { b.style.transform = ""; });
+    });
   }
 
-  /* Count-up stats */
-  const counters = document.querySelectorAll("[data-count]");
-  if (counters.length && "IntersectionObserver" in window) {
-    const co = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (!e.isIntersecting) return;
-        const el = e.target;
-        const target = parseFloat(el.dataset.count);
-        const suffix = el.dataset.suffix || "";
-        const decimals = (el.dataset.count.split(".")[1] || "").length;
-        let start = null;
-        const dur = 1400;
-        const step = (ts) => {
-          if (!start) start = ts;
-          const p = Math.min((ts - start) / dur, 1);
-          const eased = 1 - Math.pow(1 - p, 3);
-          const val = (target * eased).toFixed(decimals);
-          el.textContent = val + suffix;
-          if (p < 1) requestAnimationFrame(step);
-        };
-        requestAnimationFrame(step);
-        co.unobserve(el);
-      });
-    }, { threshold: 0.5 });
-    counters.forEach((c) => co.observe(c));
-  }
-
-  /* Friendly form handler (demo) */
-  const form = document.querySelector("#bookForm");
+  /* ---- Contact / book demo handler ---- */
+  var form = $("#book-form");
   if (form) {
-    form.addEventListener("submit", (ev) => {
-      ev.preventDefault();
-      const note = form.querySelector(".form-note");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = (form.querySelector("[name=name]") || {}).value || "there";
+      var note = $("#book-note");
       if (note) {
-        note.textContent = "🎉 Got it! Check your inbox — we'll send your call link within a few hours.";
-        note.style.display = "block";
+        note.hidden = false;
+        note.textContent = "Thanks, " + name.split(" ")[0] + "! We'll be in touch within one business day to lock in your call. 🎉";
       }
       form.reset();
     });
   }
 
-  /* Footer year */
-  const yr = document.querySelector("[data-year]");
+  /* ---- Year ---- */
+  var yr = $("#year");
   if (yr) yr.textContent = new Date().getFullYear();
 })();
