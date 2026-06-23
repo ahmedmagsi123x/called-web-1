@@ -1,6 +1,6 @@
 # Meridian Media — Website
 
-> **We don't offer services. We build authorities.**
+> **Real estate is all we do. We turn serious operators into the most trusted name in their market.**
 > A colorful, persuasive, conversion-focused site that turns a cold real estate professional into someone who books a call.
 
 A static, dependency-free site (HTML + CSS + vanilla JS). Open `index.html` in any browser — no build step. Ready to hand to a developer or deploy to Netlify / Vercel / GitHub Pages as-is.
@@ -23,11 +23,11 @@ A static, dependency-free site (HTML + CSS + vanilla JS). Open `index.html` in a
 3. **Marquee** — capabilities at a glance
 4. **The Problem** — the cost of being invisible
 5. **The Shift** — trust is now built on a screen
-6. **Meet Meridian** — the guide + positioning line
+6. **Meet Meridian** — the guide + the focus: real estate, and nothing else
 7. **How It Works** — the simple 3-step path
 8. **What We Build** — 9 services as outcomes (colorful cards)
 9. **The Proof** — the channel, the numbers, the standard
-10. **Why Meridian** — system / standard / done-for-you
+10. **Why Meridian** — real estate only / a full team / per-client research
 11. **Two Futures** — with us vs. without us
 12. **FAQ** — the 6 real objections, dissolved
 13. **Final CTA** — the warm invitation
