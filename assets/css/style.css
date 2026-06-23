@@ -108,6 +108,9 @@ section[id] { scroll-margin-top: 88px; }
 }
 .eyebrow .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--coral); }
 
+/* niche / qualifier chips */
+.chip { display: inline-block; padding: 9px 18px; border-radius: var(--r-pill); background: var(--white); color: var(--ink); box-shadow: var(--shadow-sm); font-family: var(--font-display); font-weight: 700; font-size: 0.92rem; }
+
 /* ---------- 5. Buttons ---------- */
 .btn {
   display: inline-flex; align-items: center; gap: 10px;

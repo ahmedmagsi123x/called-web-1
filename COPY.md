@@ -43,11 +43,16 @@ Meridian · Services (`#services`) · Work (`#work`) · About (`#about`) · **[B
 - **Eyebrow:** For real estate operators done being the best-kept secret
 - **H1:** Become the name your market **trusts first.**
 - **Sub:** You close the deals nobody else can touch. We make sure your whole market knows it — with done-for-you content that turns you into the obvious authority, while you keep closing.
-- **Buttons:** Book your call (`#book`) · See the proof (`#work`)
+- **Buttons:** Book your call (`#book`) · See how we work (`#work`)
 - **Trust line:** Built for wholesalers, investors & developers done watching louder amateurs win.
 
-## 2. Marquee
-YouTube Authority · Short-Form · AI Video · Scriptwriting · Social Media · Paid Ads · Branding · Strategy
+## 2. Positioning band (straight after the hero)
+- **Eyebrow:** What Meridian is
+- **H2:** One team. One standard. Your name, everywhere it matters.
+- **Lead:** Meridian is a fully done-for-you content team for serious real estate operators. You bring the deals and the expertise — we build the videos, the brand, and the authority that makes your market call *you* first.
+- **Who it's for (chips):** Wholesalers · Investors · Developers · Mobile-home operators
+- **Honest credibility line:** No vanity metrics, no freelancer roulette — just a documented system and founder-level care, pointed straight at your market.
+- **CTA:** Book your call (`#book`)
 
 ## 3. The Problem — the stakes
 - **Eyebrow:** The uncomfortable truth
@@ -73,8 +78,8 @@ YouTube Authority · Short-Form · AI Video · Scriptwriting · Social Media · 
 - **Eyebrow:** Meet Meridian
 - **Quote:** We don't offer services. *We build authorities.*
 - **Body:** We got tired of watching it happen: the sharpest operator in the market stays invisible while the loudest one cleans up. We started Meridian to flip that.
-- **Body:** We're a content and marketing team built for exactly one job — taking serious real estate professionals and making them the most recognized, most trusted name in their market. We built the system, we run the production, and we grew the channel that proves it works. You bring the expertise. We build the authority around it.
-- **Body:** You stay the hero of your story. We're the guide — the one who hands you the map, the gear, and a team that's done this before. Kind, not nice. Honest about what works. And allergic to "good enough."
+- **Body:** We're a content and marketing team built for exactly one job — taking serious real estate professionals and making them the most recognized, most trusted name in their market. You bring the expertise. We bring the rigorous, documented system that turns it into authority: scripts, production, publishing, and growth, all held to one standard.
+- **Body:** You stay the hero of your story. We're the guide — obsessive about the process, and about the care we pour into every single deliverable. Kind, not nice. Honest about what works. And allergic to "good enough."
 - **CTA:** See what we build (`#services`)
 
 ## 6. How It Works — the plan
@@ -105,18 +110,19 @@ YouTube Authority · Short-Form · AI Video · Scriptwriting · Social Media · 
 
 - **CTA:** Build my authority machine (`#book`)
 
-## 8. The Proof *(`#work`)*
-- **Eyebrow:** The proof
-- **H2:** We didn't read about this. We built it.
-- **Lead:** The fastest way to know a system works is to watch it work. So here's the channel we built and grew from zero — our living case study.
-- **Stats:** 2.4M views generated · 180K subscribers grown · 218% avg. lift in inbound · 500+ videos produced *(placeholders — swap for real numbers)*
-- **Channel card:** The Meridian Channel · Built & grown in-house · the standard we ship to
-- **Channel videos:** Deal Breakdown 142K · Market Update 88K · Investor Q&A 211K · On-Site Tour 96K
-- **H3:** One standard. Nothing ships below it.
-- **Body:** Every thumbnail, every cut, every hook is held to the same bar we set on our own channel. No "good enough." No freelancer roulette. The same elite quality, every single time — because your authority is only ever as strong as your weakest piece of content.
-- **Body:** This is what a remote team that's actually done it looks like: a documented production system that delivers, week after week, with you managing none of it.
+## 8. Our Standard *(`#work`)*
+- **Eyebrow:** Our standard
+- **H2:** No vanity metrics. A process built to make you look elite.
+- **Lead:** We're just getting started, so we won't wave borrowed numbers at you. Here's what those numbers come from instead: a rigorous, documented system — and real care for every client — engineered to make your content look elite from day one.
+- **Sample card:** The standard we build to · A sample of the look & format every deliverable meets
+- **Sample tiles:** Deal Breakdown — Scripted + edited · Market Update — Custom thumbnail · Investor Q&A — Hook-engineered · On-Site Tour — Cinematic cut
+- **H3:** Proof is in the process — not a view count.
+- **Body:** We can't show you years of results yet. What we can show you is exactly how every piece gets made — and why it'll look elite from your very first upload.
+- **Documented SOPs for every step.** Scripts, shoots, edits, thumbnails, publishing — each runs through a written checklist, so quality never rides on someone's memory or mood.
+- **One bar nothing ships below.** Every deliverable is reviewed against the same standard before it goes out. If it isn't elite, it doesn't publish.
+- **Care, not a content mill.** We take on a few clients at a time, on purpose — so you get founder-level attention and a brand treated like our own.
 - **CTA:** Get this for your market (`#book`)
-- **Testimonial:** ⭐️⭐️⭐️⭐️⭐️ — "People walk into calls already trusting me. *That changes everything.*" — the kind of thing that starts happening once your authority is built. Let's build yours.
+- **Founder's promise:** 🤝 Our promise while we're small: *founder-level care, a documented process behind every deliverable, and nothing that doesn't meet the bar.* You won't be client #500. Your win will be our first great case study — and we'd love for it to be yours.
 
 ## 9. Why Meridian
 - **Eyebrow:** Why Meridian
@@ -150,7 +156,7 @@ YouTube Authority · Short-Form · AI Video · Scriptwriting · Social Media · 
 - **Do I have to be on camera all the time?** No. We batch. You film in focused blocks — often just a few hours — and we turn that into weeks of content across every platform. We even use AI video to stretch your presence further. You're on camera far less than you think.
 - **Is it worth the money?** One extra deal usually covers months of this. You're not buying videos — you're buying the authority that makes people choose you over the next guy, for years. The expensive option is staying invisible while competitors compound past you.
 - **Will this eat the time I don't have?** The opposite. The whole model is done-for-you: we handle strategy, scripts, editing, publishing, and growth. Your only job is showing up to film. We guard your time on purpose — you've got deals to close.
-- **Can a remote team really make me look elite?** Look at our channel — that's remote-produced to the exact standard we'd hold yours to. Distance doesn't lower quality; an undocumented process does. Ours is documented, and nothing ships below the bar.
+- **Can a remote team really make me look elite?** Distance doesn't lower quality — an undocumented process does. Ours is documented down to the SOP: scripts, edits, and thumbnails all run through the same checklist and a quality review before anything ships. On our call we'll walk you through exactly how it works and show you samples of the standard.
 - **Is content even how my kind of client gets won?** Wholesaling, investing, developing, mobile homes — your sellers, buyers, and partners are all human, and they all decide who to trust before they ever reach out. Content is how that trust gets built at scale, on autopilot, in your market specifically.
 
 ## 12. Book a Call — the conversion *(`#book`)*
@@ -179,4 +185,6 @@ YouTube Authority · Short-Form · AI Video · Scriptwriting · Social Media · 
 
 ---
 
-*Placeholders to replace before launch: all stat numbers, channel video metrics, real thumbnails/screenshots, the `hello@meridian.media` inbox, social links, and wiring the form to a real handler or Calendly.*
+*Honesty rule (the company is new): no invented stats, testimonials, or logos — trust is earned through process, standard, and care. Add real metrics/case studies only once they're true. Voice + rules live in the `meridian-copywriting` skill (`.claude/skills/meridian-copywriting/`).*
+
+*Placeholders to replace before launch: real sample/spec thumbnails (kept labeled as "the standard we build to" until real), the `hello@meridian.media` inbox, social links, and wiring the form to a real handler or Calendly.*

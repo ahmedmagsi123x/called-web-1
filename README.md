@@ -14,13 +14,13 @@ Everything lives on `index.html`. The nav links scroll to sections (`#services`,
 ### Section order (the story)
 1. **Nav** — logo, anchor links, persistent *Book a Call*
 2. **Hero** — the promise: *Become the name your market trusts first*
-3. **Marquee** — capabilities at a glance
+3. **Positioning band** — what Meridian is + who it's for (no vanity metrics)
 4. **The Problem** — the cost of being invisible
 5. **The Shift** — trust is now built on a screen
 6. **Meet Meridian** `#about` — the guide + positioning line
 7. **How It Works** — the simple 3-step path
 8. **What We Build** `#services` — 9 services as outcomes (colorful cards)
-9. **The Proof** `#work` — the channel, the numbers, the standard + a testimonial
+9. **Our Standard** `#work` — documented SOPs, the quality bar, founder-level care + a founder's promise (no vanity metrics)
 10. **Why Meridian** — system / standard / done-for-you
 11. **Two Futures** — with us vs. without us
 12. **FAQ** — the 6 real objections, dissolved
@@ -62,8 +62,11 @@ Results vs. vanity · camera time · cost · time required · remote-team qualit
 - `assets/js/main.js` — nav, scroll reveals, FAQ accordion, count-up stats, demo form handler
 - `COPY.md` — the full copy deck (every word, section by section) for easy editing
 
+## Honesty note (the company is new)
+The site deliberately makes **no performance claims** — no view counts, subscriber numbers, % lifts, or testimonials, because there aren't any yet. Trust is earned through the documented process, the quality bar, and founder-level care. Copy voice + this rule live in the `meridian-copywriting` skill (`.claude/skills/meridian-copywriting/`). **Only add real, verifiable proof** — swap it in the moment it exists.
+
 ## Replace before launch (placeholders)
-- Stat numbers in `[data-count]` + channel metrics → real figures
-- Gradient video thumbnails → real thumbnails/screenshots in `assets/img/`
+- Gradient video thumbnails → real sample/spec thumbnails in `assets/img/` (keep them labeled as "the standard we build to," not as results, until real)
 - `hello@meridian.media`, social links, logo mark
 - Wire the contact form to a real handler / Calendly embed (currently a friendly demo confirmation)
+- Add real metrics / case studies **only once they're true**
