@@ -68,5 +68,5 @@ Results vs. vanity · camera time · cost · time required · remote-team qualit
 ## Replace before launch (placeholders)
 - Stat numbers in `[data-count]` + channel metrics → real figures
 - Gradient video thumbnails → real thumbnails/screenshots in `assets/img/`
-- `hello@meridianmedia.co`, social links, logo mark
+- `hello@meridian.media`, social links, logo mark
 - Wire the contact form to a real handler / Calendly embed (currently a friendly demo confirmation)
