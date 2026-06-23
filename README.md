@@ -1,37 +1,31 @@
 # Meridian Media — Website
 
 > **We don't offer services. We build authorities.**
-> A colorful, persuasive, conversion-focused site that turns a cold real estate professional into someone who books a call.
+> A colorful, persuasive, conversion-focused one-page site that turns a cold real estate professional into someone who books a call.
 
-A static, dependency-free site (HTML + CSS + vanilla JS). Open `index.html` in any browser — no build step. Ready to hand to a developer or deploy to Netlify / Vercel / GitHub Pages as-is.
+A static, dependency-free **single-page** site (HTML + CSS + vanilla JS). Open `index.html` in any browser — no build step. Ready to hand to a developer or deploy to Netlify / Vercel / GitHub Pages as-is.
 
 ---
 
-## Site map
+## One page, one narrative
 
-| Page | File | Job |
-|------|------|-----|
-| **Home** | `index.html` | The full narrative arc → book a call |
-| **Services** | `services.html` | Each service sold as a transformation |
-| **Work / Results** | `work.html` | The channel we built — proof in depth |
-| **About** | `about.html` | Story, standard, team — trust + human |
-| **Book a Call** | `contact.html` | The single conversion point |
+Everything lives on `index.html`. The nav links scroll to sections (`#services`, `#work`, `#about`, `#book`); every CTA points at the booking form (`#book`). No dead ends.
 
-### Homepage section order (the story)
-1. **Nav** — logo, links, persistent *Book a Call*
+### Section order (the story)
+1. **Nav** — logo, anchor links, persistent *Book a Call*
 2. **Hero** — the promise: *Become the name your market trusts first*
 3. **Marquee** — capabilities at a glance
 4. **The Problem** — the cost of being invisible
 5. **The Shift** — trust is now built on a screen
-6. **Meet Meridian** — the guide + positioning line
+6. **Meet Meridian** `#about` — the guide + positioning line
 7. **How It Works** — the simple 3-step path
-8. **What We Build** — 9 services as outcomes (colorful cards)
-9. **The Proof** — the channel, the numbers, the standard
+8. **What We Build** `#services` — 9 services as outcomes (colorful cards)
+9. **The Proof** `#work` — the channel, the numbers, the standard + a testimonial
 10. **Why Meridian** — system / standard / done-for-you
 11. **Two Futures** — with us vs. without us
 12. **FAQ** — the 6 real objections, dissolved
-13. **Final CTA** — the warm invitation
-14. **Footer** — CTA repeated + essentials
+13. **Book a Call** `#book` — what to expect + the form (the one conversion point)
+14. **Footer** — anchor links + essentials
 
 Every section ends pointing at the one action: **book a call**.
 
@@ -59,11 +53,14 @@ Results vs. vanity · camera time · cost · time required · remote-team qualit
 - **Palette:** warm off-white canvas; coral, green, yellow, blue, purple, pink used in soft section blocks. Each section owns a color family.
 - **Shape:** everything rounded — pill buttons, rounded cards, blobby background shapes.
 - **Type:** `Bricolage Grotesque` (characterful display) + `Plus Jakarta Sans` (clean body), via Google Fonts.
-- **Motion:** scroll reveals, count-up stats, animated bars, floating blobs, springy hovers. Respects `prefers-reduced-motion`.
+- **Motion:** scroll reveals, count-up stats, animated bars, floating blobs, springy hovers. Smooth in-page anchor scrolling, with `scroll-margin-top` so the sticky nav never covers a heading. Respects `prefers-reduced-motion`.
 - **Tokens:** all colors, radii, shadows, and spacing live as CSS variables at the top of `assets/css/style.css`.
 
-## Conversion path
-`Book a Call` appears in: the nav (every page), hero, after the shift, after How-It-Works, in proof, the final CTA band, the footer, and the contact form. No dead ends.
+## Files
+- `index.html` — the entire site
+- `assets/css/style.css` — design system + all styles
+- `assets/js/main.js` — nav, scroll reveals, FAQ accordion, count-up stats, demo form handler
+- `COPY.md` — the full copy deck (every word, section by section) for easy editing
 
 ## Replace before launch (placeholders)
 - Stat numbers in `[data-count]` + channel metrics → real figures
