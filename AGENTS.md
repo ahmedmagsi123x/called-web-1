@@ -50,8 +50,15 @@ component source by hand (the same result the CLI produces).
 
 - `hello@meridianmedia.co`, `metadataBase` URL, social links, real logo mark.
 - Hero "inbound" readout is a stylized demo, not live data.
-- `public/services/*.svg` — placeholder 3D-vector art for the featured-services section.
-  Overwrite each (youtube/short-form/branding/strategy/production) with the real
-  uploaded vectors, keeping the filenames (or repoint in `featured-services.tsx`).
+- `public/services/` — art for the featured-services section.
+  - `strategy.png`, `production.png` — real uploaded 3D models, rendered to
+    transparent PNG (FBX/GLB → glb via FBX2glTF → PNG via headless model-viewer).
+  - `youtube.svg`, `short-form.svg`, `branding.svg` — still placeholders;
+    awaiting uploads. Overwrite (keep the filename) or repoint in
+    `featured-services.tsx`.
+  - `paid-ads.png` — rendered "ADS" model, not yet placed (Paid advertising
+    lives in the 10-item index, which is icon-only).
+  - The two `.blend` uploads (AI brain, financial strategy) could not be
+    rendered here — Blender isn't installed. Re-export them as `.glb`/`.fbx`/PNG.
 - Wire `BookingForm` to a real scheduler (Calendly / Cal.com) or form handler — it currently
   shows a demo confirmation.

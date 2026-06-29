@@ -31,13 +31,13 @@ const featured = [
   {
     no: "04",
     name: "Strategy",
-    img: "/services/strategy.svg",
+    img: "/services/strategy.png",
     copy: "Content without direction rarely creates momentum. We develop strategic frameworks that expand your visibility, strengthen your market position, and drive business growth.",
   },
   {
     no: "05",
     name: "Production",
-    img: "/services/production.svg",
+    img: "/services/production.png",
     copy: "Great ideas deserve exceptional execution. Every detail shapes perception. Our production process ensures every asset reflects the top-tier quality of your business.",
   },
 ];
