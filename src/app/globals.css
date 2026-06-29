@@ -11,69 +11,71 @@
 :root {
   --radius: 0.75rem;
 
-  --background: #f3efe6;
-  --foreground: #0b1e30;
+  /* whitish vanilla canvas */
+  --background: #f8f2e4;
+  --foreground: #16302a;
 
-  --card: #fbf9f3;
-  --card-foreground: #0b1e30;
+  --card: #fdf9ef;
+  --card-foreground: #16302a;
 
-  --popover: #fbf9f3;
-  --popover-foreground: #0b1e30;
+  --popover: #fdf9ef;
+  --popover-foreground: #16302a;
 
-  /* On paper, the strong CTA is deep ink. */
-  --primary: #0b1e30;
-  --primary-foreground: #f6f2e9;
+  /* On vanilla, the strong CTA is deep green. */
+  --primary: #16302a;
+  --primary-foreground: #f8f2e4;
 
-  --secondary: #e7e0d0;
-  --secondary-foreground: #0b1e30;
+  --secondary: #ece3d0;
+  --secondary-foreground: #16302a;
 
-  --muted: #e9e3d5;
-  --muted-foreground: #586773;
+  --muted: #ece3d0;
+  --muted-foreground: #5d6b60;
 
-  --accent: #e7e0d0;
-  --accent-foreground: #0b1e30;
+  --accent: #ece3d0;
+  --accent-foreground: #16302a;
 
   --destructive: #a83a2c;
-  --destructive-foreground: #f6f2e9;
+  --destructive-foreground: #f8f2e4;
 
-  --border: #dad2c0;
-  --input: #d2c9b5;
-  --ring: #9a6c1f;
+  --border: #e0d6c1;
+  --input: #d6cbb3;
+  --ring: #c25e10;
 
-  /* signature accent — the meridian line */
-  --brass: #8f6418;
+  /* signature accent — warm orange */
+  --brass: #b85710;
 }
 
 /* Ink surfaces: locally re-map the semantic tokens so every
    shadcn component flips automatically inside `.ink`. */
 .ink {
-  --background: #0a1c2e;
-  --foreground: #ece5d6;
+  /* deep, slightly dark green surface */
+  --background: #143228;
+  --foreground: #f1ebdb;
 
-  --card: #102a40;
-  --card-foreground: #ece5d6;
+  --card: #1b3e31;
+  --card-foreground: #f1ebdb;
 
-  --popover: #102a40;
-  --popover-foreground: #ece5d6;
+  --popover: #1b3e31;
+  --popover-foreground: #f1ebdb;
 
-  /* On ink, the strong CTA is brass. */
-  --primary: #cda24e;
-  --primary-foreground: #0a1c2e;
+  /* On green, the strong CTA is orange. */
+  --primary: #e87d2a;
+  --primary-foreground: #14302a;
 
-  --secondary: #16324b;
-  --secondary-foreground: #ece5d6;
+  --secondary: #20493a;
+  --secondary-foreground: #f1ebdb;
 
-  --muted: #16324b;
-  --muted-foreground: #98abba;
+  --muted: #20493a;
+  --muted-foreground: #a7bcaf;
 
-  --accent: #16324b;
-  --accent-foreground: #ece5d6;
+  --accent: #20493a;
+  --accent-foreground: #f1ebdb;
 
-  --border: color-mix(in oklab, #cda24e 22%, transparent);
-  --input: color-mix(in oklab, #ece5d6 18%, transparent);
-  --ring: #cda24e;
+  --border: color-mix(in oklab, #ef8a35 24%, transparent);
+  --input: color-mix(in oklab, #f1ebdb 18%, transparent);
+  --ring: #ef8a35;
 
-  --brass: #cda24e;
+  --brass: #ef8a35;
 
   background-color: var(--background);
   color: var(--foreground);

@@ -44,10 +44,10 @@ export function SiteFooter() {
           <p className="coord">© {new Date().getFullYear()} Meridian Media</p>
           <nav className="flex gap-6">
             <Link href="/#method" className="hover:text-foreground">
-              Method
+              Process
             </Link>
             <Link href="/#work" className="hover:text-foreground">
-              What we build
+              What we deliver
             </Link>
             <Link href="/#faq" className="hover:text-foreground">
               Questions
