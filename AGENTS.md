@@ -49,7 +49,9 @@ component source by hand (the same result the CLI produces).
 ## Before launch (placeholders to replace)
 
 - `hello@meridianmedia.co`, `metadataBase` URL, social links, real logo mark.
-- Proof/benchmark figures in `src/app/page.tsx` (`proof` array) — currently illustrative.
 - Hero "inbound" readout is a stylized demo, not live data.
+- `public/services/*.svg` — placeholder 3D-vector art for the featured-services section.
+  Overwrite each (youtube/short-form/branding/strategy/production) with the real
+  uploaded vectors, keeping the filenames (or repoint in `featured-services.tsx`).
 - Wire `BookingForm` to a real scheduler (Calendly / Cal.com) or form handler — it currently
   shows a demo confirmation.

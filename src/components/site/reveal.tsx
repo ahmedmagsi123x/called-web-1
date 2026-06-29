@@ -12,10 +12,12 @@ export function Reveal({
   className,
   as: Tag = "div",
   delay = 0,
+  from,
   ...props
 }: React.ComponentProps<"div"> & {
   as?: React.ElementType;
   delay?: number;
+  from?: "up" | "left" | "right" | "scale" | "open";
 }) {
   const ref = React.useRef<HTMLElement>(null);
 
@@ -41,6 +43,7 @@ export function Reveal({
     <Tag
       ref={ref}
       className={cn("reveal", className)}
+      data-from={from && from !== "up" ? from : undefined}
       style={{ transitionDelay: delay ? `${delay}ms` : undefined }}
       {...props}
     />

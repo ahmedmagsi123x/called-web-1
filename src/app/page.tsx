@@ -28,6 +28,7 @@ import { SiteFooter } from "@/components/site/site-footer";
 import { Reveal } from "@/components/site/reveal";
 import { SectionLabel } from "@/components/site/section-label";
 import { ParticleField } from "@/components/site/particle-field";
+import { FeaturedServices } from "@/components/site/featured-services";
 
 const services = [
   {
@@ -297,11 +298,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ===================== WHAT WE DELIVER ===================== */}
-        <section id="work" className="scroll-mt-16">
+        {/* ===================== SIGNATURE WORK (featured) ===================== */}
+        <section className="relative scroll-mt-16">
           <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
             <Reveal>
-              <SectionLabel index="03" coord="THE WORK">
+              <SectionLabel index="03" coord="SIGNATURE WORK">
+                Where we go deepest
+              </SectionLabel>
+            </Reveal>
+            <Reveal>
+              <h2 className="display mt-8 max-w-3xl text-balance text-4xl sm:text-5xl">
+                Five disciplines we obsess over.
+              </h2>
+            </Reveal>
+            <FeaturedServices />
+          </div>
+        </section>
+
+        {/* ===================== WHAT WE DELIVER ===================== */}
+        <section id="work" className="ink relative scroll-mt-16">
+          <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
+            <Reveal>
+              <SectionLabel index="04" coord="THE FULL MENU">
                 What we deliver
               </SectionLabel>
             </Reveal>
@@ -342,12 +360,12 @@ export default function Home() {
         </section>
 
         {/* ===================== WHY MERIDIAN ===================== */}
-        <section className="ink relative scroll-mt-16">
+        <section className="relative scroll-mt-16">
           <div className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
             <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
               <Reveal>
                 <div>
-                  <SectionLabel index="04" coord="THE NAME">
+                  <SectionLabel index="05" coord="THE NAME">
                     Why Meridian
                   </SectionLabel>
                   <h2 className="display mt-8 text-balance text-4xl sm:text-5xl">
@@ -393,10 +411,10 @@ export default function Home() {
         </section>
 
         {/* ===================== FAQ ===================== */}
-        <section id="faq" className="relative scroll-mt-16">
+        <section id="faq" className="ink relative scroll-mt-16">
           <div className="relative mx-auto max-w-3xl px-5 py-20 sm:px-8 lg:py-28">
             <Reveal>
-              <SectionLabel index="05" coord="OBJECTIONS, DISSOLVED">
+              <SectionLabel index="06" coord="OBJECTIONS, DISSOLVED">
                 Before you book
               </SectionLabel>
             </Reveal>
