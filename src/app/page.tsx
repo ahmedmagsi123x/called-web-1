@@ -7,11 +7,12 @@ import {
   Smartphone,
   Sparkles,
   Share2,
-  Search,
-  LineChart,
   Microscope,
-  Layers,
-  Film,
+  MonitorPlay,
+  Bot,
+  Mail,
+  Megaphone,
+  Palette,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -30,44 +31,64 @@ import { ParticleField } from "@/components/site/particle-field";
 
 const services = [
   {
-    icon: Compass,
-    title: "Brand strategy & positioning",
-    outcome: "Own a clear, defensible place in your market's mind.",
+    no: "01",
+    icon: MonitorPlay,
+    title: "YouTube content production",
+    outcome: "Long-form authority that makes you the operator people search for.",
   },
   {
-    icon: PenTool,
-    title: "Creative direction",
-    outcome: "A look and a voice that signal trust before you say a word.",
-  },
-  {
-    icon: Layers,
-    title: "Content systems",
-    outcome: "Show up consistently, everywhere your market pays attention.",
-  },
-  {
-    icon: Film,
-    title: "Video production",
-    outcome: "Studio-grade production that makes every deal look premium.",
-  },
-  {
+    no: "02",
     icon: Smartphone,
-    title: "Short-form social",
-    outcome: "Be the face that follows your market across every feed.",
+    title: "Short-form content",
+    outcome: "Daily reach that puts your face in front of the whole market.",
   },
   {
+    no: "03",
+    icon: Bot,
+    title: "AI video production",
+    outcome: "Scale your presence with polished, on-brand video — produced faster.",
+  },
+  {
+    no: "04",
     icon: Share2,
-    title: "Social management",
-    outcome: "Own the conversation on every platform — handled for you.",
+    title: "Social media management",
+    outcome: "Every platform handled, consistent, and on-brand — done for you.",
   },
   {
-    icon: Search,
-    title: "Research & insight",
-    outcome: "Work grounded in a deep read of your market and audience.",
+    no: "05",
+    icon: PenTool,
+    title: "Scriptwriting & copywriting",
+    outcome: "Words that build trust and move the right people to act.",
   },
   {
-    icon: LineChart,
-    title: "Reporting & optimization",
-    outcome: "See what builds authority — then do more of exactly that.",
+    no: "06",
+    icon: Clapperboard,
+    title: "Property & business video",
+    outcome: "Listings and brand films that make every deal look premium.",
+  },
+  {
+    no: "07",
+    icon: Mail,
+    title: "Email marketing & CRM",
+    outcome: "Stay top of mind and turn your list into booked calls.",
+  },
+  {
+    no: "08",
+    icon: Megaphone,
+    title: "Paid advertising",
+    outcome: "Qualified buyers and sellers in front of your offer, on demand.",
+  },
+  {
+    no: "09",
+    icon: Palette,
+    title: "Branding & design",
+    outcome: "An identity that signals authority before you say a word.",
+  },
+  {
+    no: "10",
+    icon: Compass,
+    title: "Strategy & consulting",
+    outcome: "A clear plan that ties every asset to real commercial growth.",
   },
 ];
 
@@ -192,13 +213,14 @@ export default function Home() {
           <div className="absolute inset-x-0 bottom-0 border-t border-border">
             <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-8 gap-y-2 px-5 py-4 sm:px-8">
               {[
-                "Strategy",
-                "Creative",
-                "Content",
-                "Production",
+                "YouTube",
+                "Short-form",
+                "AI video",
                 "Social",
-                "Research",
-                "Reporting",
+                "Copywriting",
+                "Paid ads",
+                "Branding",
+                "Strategy",
               ].map((c) => (
                 <span key={c} className="coord">
                   {c}
@@ -292,19 +314,25 @@ export default function Home() {
               </h2>
             </Reveal>
 
-            <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-2">
               {services.map((s, i) => {
                 const Icon = s.icon;
                 return (
-                  <Reveal key={s.title} delay={(i % 4) * 70}>
-                    <div className="group h-full bg-card p-7 transition-colors hover:bg-secondary/50">
-                      <span className="flex size-11 items-center justify-center rounded-full border border-brass/40 text-brass transition-transform group-hover:-translate-y-0.5">
-                        <Icon className="size-5" />
+                  <Reveal key={s.no} delay={(i % 2) * 80}>
+                    <div className="group flex h-full items-start gap-5 bg-card p-6 transition-colors hover:bg-secondary/50 sm:p-7">
+                      <span className="coord mt-1 shrink-0 text-brass">
+                        {s.no}
                       </span>
-                      <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                        {s.outcome}
-                      </p>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2.5">
+                          <Icon className="size-5 shrink-0 text-brass" />
+                          <h3 className="text-lg font-semibold">{s.title}</h3>
+                        </div>
+                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                          {s.outcome}
+                        </p>
+                      </div>
+                      <ArrowRight className="mt-1 size-4 shrink-0 -translate-x-1 text-brass opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
                     </div>
                   </Reveal>
                 );
