@@ -60,11 +60,6 @@ export function FeaturedServices() {
               }`}
             >
               <div className="relative mx-auto flex max-w-sm items-center justify-center">
-                {/* ambient glow behind the vector */}
-                <div
-                  className="absolute size-56 rounded-full bg-brass/20 blur-3xl sm:size-72"
-                  aria-hidden
-                />
                 <div className="floaty relative">
                   <div className="tilt">
                     {/* plain <img> so any uploaded asset format (svg/png/webp)
