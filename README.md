@@ -1,72 +1,58 @@
-# Meridian Media — Website
+# Meridian Media
 
-> **We don't offer services. We build authorities.**
-> A colorful, persuasive, conversion-focused site that turns a cold real estate professional into someone who books a call.
+> **Trust is scarce. How you're perceived shapes your growth.**
 
-A static, dependency-free site (HTML + CSS + vanilla JS). Open `index.html` in any browser — no build step. Ready to hand to a developer or deploy to Netlify / Vercel / GitHub Pages as-is.
+The website for Meridian Media — a full-service branding agency that helps real estate
+operators strengthen their reputation, expand their influence, and turn expertise into
+recognition, trust, and market demand.
 
----
+Built with **Next.js 16** (App Router) · **Tailwind CSS v4** · **shadcn/ui** · **TypeScript**.
 
-## Site map
+## Getting started
 
-| Page | File | Job |
-|------|------|-----|
-| **Home** | `index.html` | The full narrative arc → book a call |
-| **Services** | `services.html` | Each service sold as a transformation |
-| **Work / Results** | `work.html` | The channel we built — proof in depth |
-| **About** | `about.html` | Story, standard, team — trust + human |
-| **Book a Call** | `contact.html` | The single conversion point |
+```bash
+pnpm install
+pnpm dev      # http://localhost:3000
+```
 
-### Homepage section order (the story)
-1. **Nav** — logo, links, persistent *Book a Call*
-2. **Hero** — the promise: *Become the name your market trusts first*
-3. **Marquee** — capabilities at a glance
-4. **The Problem** — the cost of being invisible
-5. **The Shift** — trust is now built on a screen
-6. **Meet Meridian** — the guide + positioning line
-7. **How It Works** — the simple 3-step path
-8. **What We Build** — 9 services as outcomes (colorful cards)
-9. **The Proof** — the channel, the numbers, the standard
-10. **Why Meridian** — system / standard / done-for-you
-11. **Two Futures** — with us vs. without us
-12. **FAQ** — the 6 real objections, dissolved
-13. **Final CTA** — the warm invitation
-14. **Footer** — CTA repeated + essentials
+```bash
+pnpm build    # production build
+pnpm lint     # eslint
+```
 
-Every section ends pointing at the one action: **book a call**.
+## What's here
 
----
+| Route | File | Job |
+|-------|------|-----|
+| **Home** | `src/app/page.tsx` | The full narrative → book a call |
+| **Book a call** | `src/app/contact/page.tsx` | The single conversion point |
 
-## Service → benefit translations
-| Service | What they actually get |
-|---------|------------------------|
-| YouTube production | *Become the channel your market subscribes to and trusts* |
-| Short-form | *Be the face that follows them everywhere* |
-| AI video | *Show up more without filming more* |
-| Social management | *Own the conversation in your market* |
-| Scripting & copy | *Never stare at a blank page again* |
-| Property/business video | *Make every deal look premium* |
-| Email | *Stay in their inbox, top of mind* |
-| Paid ads | *Pour fuel on what's already working* |
-| Branding & strategy | *Look the most trusted before you say a word* |
+Homepage flow: hero (*wake up to qualified leads*) → the thesis (*trust is scarce*) →
+the process (research → strategy & creative → production) → what we build → the standard →
+why Meridian → FAQ → final invitation.
 
-## Objections handled (in-flow + FAQ)
-Results vs. vanity · camera time · cost · time required · remote-team quality · "is content even how my client is won?"
+## Design
 
----
+The identity is built on the brand's own meaning: a **meridian** is the prime reference line
+a market navigates by. That idea drives a navigational, instrument-inspired system —
 
-## Design system
-- **Palette:** warm off-white canvas; coral, green, yellow, blue, purple, pink used in soft section blocks. Each section owns a color family.
-- **Shape:** everything rounded — pill buttons, rounded cards, blobby background shapes.
-- **Type:** `Bricolage Grotesque` (characterful display) + `Plus Jakarta Sans` (clean body), via Google Fonts.
-- **Motion:** scroll reveals, count-up stats, animated bars, floating blobs, springy hovers. Respects `prefers-reduced-motion`.
-- **Tokens:** all colors, radii, shadows, and spacing live as CSS variables at the top of `assets/css/style.css`.
+- **Palette:** warm survey *paper*, deep navigational *ink* sections, a single restrained
+  *brass* reference line as the signature accent.
+- **Type:** Bricolage Grotesque (display) · Hanken Grotesk (body) · IBM Plex Mono (coordinates & data).
+- **Signature:** a brass meridian line and mono "coordinate" labels that plot each section on
+  the page's single axis — from *invisible* to *the name trusted first*.
+- Responsive to mobile, keyboard-accessible focus, and `prefers-reduced-motion` respected.
 
-## Conversion path
-`Book a Call` appears in: the nav (every page), hero, after the shift, after How-It-Works, in proof, the final CTA band, the footer, and the contact form. No dead ends.
+Design tokens live at the top of `src/app/globals.css`. Dark (`.ink`) sections re-map the
+shadcn semantic tokens locally, so components adapt automatically.
 
-## Replace before launch (placeholders)
-- Stat numbers in `[data-count]` + channel metrics → real figures
-- Gradient video thumbnails → real thumbnails/screenshots in `assets/img/`
-- `hello@meridianmedia.co`, social links, logo mark
-- Wire the contact form to a real handler / Calendly embed (currently a friendly demo confirmation)
+## Replace before launch
+
+- `hello@meridianmedia.co`, the `metadataBase` URL, social links, and a real logo mark.
+- The proof/benchmark figures (illustrative) and the hero "inbound" readout (a stylized demo).
+- Wire the booking form to a real scheduler (Calendly / Cal.com) or form handler — it currently
+  shows a friendly demo confirmation.
+
+## Legacy
+
+The previous dependency-free static site is archived under [`legacy-static/`](./legacy-static).
