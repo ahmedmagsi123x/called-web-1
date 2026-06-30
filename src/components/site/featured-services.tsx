@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { Reveal } from "@/components/site/reveal";
 import { Button } from "@/components/ui/button";
+import { asset } from "@/lib/asset";
 
 /**
  * Five signature areas, each with a floating 3D-vector slot.
@@ -66,7 +67,7 @@ export function FeaturedServices() {
                         drops in without next/image SVG config */}
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src={s.img}
+                      src={asset(s.img)}
                       alt={`${s.name} — illustration`}
                       width={400}
                       height={400}
