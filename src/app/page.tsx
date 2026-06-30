@@ -15,6 +15,7 @@ import { Reveal } from "@/components/site/reveal";
 import { SectionLabel } from "@/components/site/section-label";
 import { ParticleField } from "@/components/site/particle-field";
 import { ServicesMenu } from "@/components/site/services-menu";
+import { HeroHeadline } from "@/components/site/hero-headline";
 
 const strip = [
   "YouTube",
@@ -109,18 +110,16 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={80}>
-              <h1 className="display mt-7 text-balance text-5xl text-foreground sm:text-6xl lg:text-7xl">
-                Imagine waking up to{" "}
-                <span className="plot text-brass">qualified leads</span>, every
-                day.
-              </h1>
+              <HeroHeadline className="display mt-7 text-balance text-5xl text-foreground sm:text-6xl lg:text-7xl" />
             </Reveal>
 
             <Reveal delay={160}>
               <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground">
                 A dominant online presence is the ultimate unfair advantage.
-                Meridian provides strategy-led marketing solutions for real
-                estate operators who are ready to scale.
+                <span className="mt-3 block">
+                  Meridian provides strategy-led marketing solutions for real
+                  estate operators who are ready to scale.
+                </span>
               </p>
             </Reveal>
 

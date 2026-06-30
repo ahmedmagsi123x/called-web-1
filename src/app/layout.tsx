@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { Fraunces, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const display = Bricolage_Grotesque({
+// Variable serif (weight + optical size) — distinctive display face, and its
+// `wght` axis drives the cursor-reactive hero headline.
+const display = Fraunces({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  axes: ["opsz"],
+  display: "swap",
 });
 
 const body = Hanken_Grotesk({
