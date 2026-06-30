@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/site/logo";
 
 const links = [
   { href: "/#method", label: "Process" },
@@ -34,19 +35,8 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <Link
-          href="/"
-          className="group flex items-center gap-2.5"
-          aria-label="Meridian Media home"
-        >
-          <span
-            aria-hidden
-            className="relative flex size-7 items-center justify-center rounded-full border border-brass/60"
-          >
-            <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-brass" />
-            <span className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-brass/35" />
-          </span>
-          <span className="text-lg font-semibold tracking-tight">Meridian</span>
+        <Link href="/" aria-label="Meridian Media home">
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

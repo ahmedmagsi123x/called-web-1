@@ -11,71 +11,71 @@
 :root {
   --radius: 0.75rem;
 
-  /* whitish vanilla canvas */
-  --background: #f8f2e4;
-  --foreground: #16302a;
+  /* whitish vanilla canvas — the dominant surface */
+  --background: #f9f4e8;
+  --foreground: #213d33;
 
-  --card: #fdf9ef;
-  --card-foreground: #16302a;
+  --card: #fffaf0;
+  --card-foreground: #213d33;
 
-  --popover: #fdf9ef;
-  --popover-foreground: #16302a;
+  --popover: #fffaf0;
+  --popover-foreground: #213d33;
 
-  /* On vanilla, the strong CTA is deep green. */
-  --primary: #16302a;
-  --primary-foreground: #f8f2e4;
+  /* On vanilla, the strong CTA is a softened green. */
+  --primary: #2a5446;
+  --primary-foreground: #f9f4e8;
 
-  --secondary: #ece3d0;
-  --secondary-foreground: #16302a;
+  --secondary: #efe7d4;
+  --secondary-foreground: #213d33;
 
-  --muted: #ece3d0;
-  --muted-foreground: #5d6b60;
+  --muted: #efe7d4;
+  --muted-foreground: #64715f;
 
-  --accent: #ece3d0;
-  --accent-foreground: #16302a;
+  --accent: #efe7d4;
+  --accent-foreground: #213d33;
 
   --destructive: #a83a2c;
-  --destructive-foreground: #f8f2e4;
+  --destructive-foreground: #f9f4e8;
 
-  --border: #e0d6c1;
-  --input: #d6cbb3;
-  --ring: #c25e10;
+  --border: #e6ddca;
+  --input: #ddd3bc;
+  --ring: #d2701c;
 
-  /* signature accent — warm orange */
-  --brass: #b85710;
+  /* signature accent — warm, lighter orange */
+  --brass: #cb6a1c;
 }
 
 /* Ink surfaces: locally re-map the semantic tokens so every
    shadcn component flips automatically inside `.ink`. */
 .ink {
-  /* deep, slightly dark green surface */
-  --background: #143228;
-  --foreground: #f1ebdb;
+  /* lighter, softer green surface — used sparingly (hero + footer) */
+  --background: #234a3c;
+  --foreground: #f3eddf;
 
-  --card: #1b3e31;
-  --card-foreground: #f1ebdb;
+  --card: #2b5848;
+  --card-foreground: #f3eddf;
 
-  --popover: #1b3e31;
-  --popover-foreground: #f1ebdb;
+  --popover: #2b5848;
+  --popover-foreground: #f3eddf;
 
-  /* On green, the strong CTA is orange. */
-  --primary: #e87d2a;
-  --primary-foreground: #14302a;
+  /* On green, the strong CTA is a light orange. */
+  --primary: #f2964c;
+  --primary-foreground: #1c3a30;
 
-  --secondary: #20493a;
-  --secondary-foreground: #f1ebdb;
+  --secondary: #2f5e4c;
+  --secondary-foreground: #f3eddf;
 
-  --muted: #20493a;
-  --muted-foreground: #a7bcaf;
+  --muted: #2f5e4c;
+  --muted-foreground: #b6c8bb;
 
-  --accent: #20493a;
-  --accent-foreground: #f1ebdb;
+  --accent: #2f5e4c;
+  --accent-foreground: #f3eddf;
 
-  --border: color-mix(in oklab, #ef8a35 24%, transparent);
-  --input: color-mix(in oklab, #f1ebdb 18%, transparent);
-  --ring: #ef8a35;
+  --border: color-mix(in oklab, #f6a25a 26%, transparent);
+  --input: color-mix(in oklab, #f3eddf 18%, transparent);
+  --ring: #f6a25a;
 
-  --brass: #ef8a35;
+  --brass: #f6a25a;
 
   background-color: var(--background);
   color: var(--foreground);
@@ -275,6 +275,47 @@
   .animate-sweep {
     transform-origin: top;
     animation: sweep 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  /* Glassmorphism card */
+  .glass {
+    background-color: color-mix(in oklab, #ffffff 52%, transparent);
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+    border: 1px solid color-mix(in oklab, #ffffff 65%, transparent);
+    box-shadow:
+      0 18px 50px -20px color-mix(in oklab, #213d33 60%, transparent),
+      inset 0 1px 0 0 color-mix(in oklab, #ffffff 70%, transparent);
+  }
+
+  /* Soft blurred color blob for backdrops */
+  .blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(64px);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  /* Right-to-left marquee */
+  @keyframes marquee-rtl {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .marquee {
+    overflow: hidden;
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-rtl 30s linear infinite;
+  }
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
   }
 }
 

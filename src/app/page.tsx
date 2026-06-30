@@ -1,19 +1,5 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  Compass,
-  PenTool,
-  Clapperboard,
-  Smartphone,
-  Sparkles,
-  Share2,
-  Microscope,
-  MonitorPlay,
-  Bot,
-  Mail,
-  Megaphone,
-  Palette,
-} from "lucide-react";
+import { ArrowRight, Microscope, Sparkles, Clapperboard } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -29,68 +15,18 @@ import { Reveal } from "@/components/site/reveal";
 import { SectionLabel } from "@/components/site/section-label";
 import { ParticleField } from "@/components/site/particle-field";
 import { FeaturedServices } from "@/components/site/featured-services";
+import { ServicesMenu } from "@/components/site/services-menu";
 
-const services = [
-  {
-    no: "01",
-    icon: MonitorPlay,
-    title: "YouTube content production",
-    outcome: "Long-form authority that makes you the operator people search for.",
-  },
-  {
-    no: "02",
-    icon: Smartphone,
-    title: "Short-form content",
-    outcome: "Daily reach that puts your face in front of the whole market.",
-  },
-  {
-    no: "03",
-    icon: Bot,
-    title: "AI video production",
-    outcome: "Scale your presence with polished, on-brand video — produced faster.",
-  },
-  {
-    no: "04",
-    icon: Share2,
-    title: "Social media management",
-    outcome: "Every platform handled, consistent, and on-brand — done for you.",
-  },
-  {
-    no: "05",
-    icon: PenTool,
-    title: "Scriptwriting & copywriting",
-    outcome: "Words that build trust and move the right people to act.",
-  },
-  {
-    no: "06",
-    icon: Clapperboard,
-    title: "Property & business video",
-    outcome: "Listings and brand films that make every deal look premium.",
-  },
-  {
-    no: "07",
-    icon: Mail,
-    title: "Email marketing & CRM",
-    outcome: "Stay top of mind and turn your list into booked calls.",
-  },
-  {
-    no: "08",
-    icon: Megaphone,
-    title: "Paid advertising",
-    outcome: "Qualified buyers and sellers in front of your offer, on demand.",
-  },
-  {
-    no: "09",
-    icon: Palette,
-    title: "Branding & design",
-    outcome: "An identity that signals authority before you say a word.",
-  },
-  {
-    no: "10",
-    icon: Compass,
-    title: "Strategy & consulting",
-    outcome: "A clear plan that ties every asset to real commercial growth.",
-  },
+const strip = [
+  "YouTube",
+  "Short-form",
+  "AI video",
+  "Social",
+  "Copywriting",
+  "Paid ads",
+  "Branding",
+  "Strategy",
+  "Reporting",
 ];
 
 const method = [
@@ -155,11 +91,10 @@ export default function Home() {
             autoPlay muted loop playsInline
             src="/hero.mp4"
           /> */}
-          <div className="grid-survey absolute inset-0 opacity-40" aria-hidden />
+          <div className="grid-survey absolute inset-0 opacity-30" aria-hidden />
           <ParticleField className="absolute inset-0 h-full w-full" />
-          {/* soft vignette so the centered copy stays legible over the embers */}
           <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,rgba(20,50,40,0.55)_100%)]"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(28,58,48,0.55)_100%)]"
             aria-hidden
           />
 
@@ -210,22 +145,25 @@ export default function Home() {
             </Reveal>
           </div>
 
-          {/* capability strip */}
-          <div className="absolute inset-x-0 bottom-0 border-t border-border">
-            <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-8 gap-y-2 px-5 py-4 sm:px-8">
-              {[
-                "YouTube",
-                "Short-form",
-                "AI video",
-                "Social",
-                "Copywriting",
-                "Paid ads",
-                "Branding",
-                "Strategy",
-              ].map((c) => (
-                <span key={c} className="coord">
-                  {c}
-                </span>
+          {/* capability strip — right-to-left marquee */}
+          <div className="marquee absolute inset-x-0 bottom-0 border-t border-border">
+            <div className="marquee-track py-4">
+              {[0, 1].map((rep) => (
+                <div
+                  key={rep}
+                  className="flex shrink-0 items-center"
+                  aria-hidden={rep === 1}
+                >
+                  {strip.map((c) => (
+                    <span
+                      key={c}
+                      className="coord flex items-center whitespace-nowrap"
+                    >
+                      <span className="px-7">{c}</span>
+                      <span className="text-brass">•</span>
+                    </span>
+                  ))}
+                </div>
               ))}
             </div>
           </div>
@@ -257,9 +195,13 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ===================== METHOD / PROCESS ===================== */}
-        <section id="method" className="ink relative scroll-mt-16">
-          <div className="grid-survey absolute inset-0 opacity-25" aria-hidden />
+        {/* ===================== METHOD / PROCESS (glass) ===================== */}
+        <section id="method" className="relative scroll-mt-16 overflow-hidden">
+          <div className="blob -left-16 top-8 size-80 bg-brass/30" aria-hidden />
+          <div
+            className="blob -right-10 bottom-0 size-96 bg-primary/20"
+            aria-hidden
+          />
           <div className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
             <Reveal>
               <SectionLabel index="02" coord="THE PROCESS">
@@ -277,12 +219,12 @@ export default function Home() {
                 const Icon = m.icon;
                 return (
                   <Reveal key={m.step} delay={i * 100}>
-                    <div className="relative h-full rounded-xl border border-border bg-card/50 p-7">
+                    <div className="glass relative h-full rounded-2xl p-7">
                       <div className="flex items-center justify-between">
-                        <span className="flex size-11 items-center justify-center rounded-full border border-brass/40 text-brass">
+                        <span className="flex size-11 items-center justify-center rounded-full border border-brass/40 bg-brass/10 text-brass">
                           <Icon className="size-5" />
                         </span>
-                        <span className="display text-3xl text-brass/40">
+                        <span className="display text-3xl text-brass/50">
                           {m.step}
                         </span>
                       </div>
@@ -315,8 +257,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ===================== WHAT WE DELIVER ===================== */}
-        <section id="work" className="ink relative scroll-mt-16">
+        {/* ===================== WHAT WE DELIVER (interactive menu) ============ */}
+        <section id="work" className="relative scroll-mt-16 bg-secondary/30">
           <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
             <Reveal>
               <SectionLabel index="04" coord="THE FULL MENU">
@@ -331,31 +273,7 @@ export default function Home() {
                 audience.
               </h2>
             </Reveal>
-
-            <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-2">
-              {services.map((s, i) => {
-                const Icon = s.icon;
-                return (
-                  <Reveal key={s.no} delay={(i % 2) * 80}>
-                    <div className="group flex h-full items-start gap-5 bg-card p-6 transition-colors hover:bg-secondary/50 sm:p-7">
-                      <span className="coord mt-1 shrink-0 text-brass">
-                        {s.no}
-                      </span>
-                      <div className="min-w-0 flex-1">
-                        <div className="flex items-center gap-2.5">
-                          <Icon className="size-5 shrink-0 text-brass" />
-                          <h3 className="text-lg font-semibold">{s.title}</h3>
-                        </div>
-                        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                          {s.outcome}
-                        </p>
-                      </div>
-                      <ArrowRight className="mt-1 size-4 shrink-0 -translate-x-1 text-brass opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100" />
-                    </div>
-                  </Reveal>
-                );
-              })}
-            </div>
+            <ServicesMenu />
           </div>
         </section>
 
@@ -411,7 +329,7 @@ export default function Home() {
         </section>
 
         {/* ===================== FAQ ===================== */}
-        <section id="faq" className="ink relative scroll-mt-16">
+        <section id="faq" className="relative scroll-mt-16 bg-secondary/30">
           <div className="relative mx-auto max-w-3xl px-5 py-20 sm:px-8 lg:py-28">
             <Reveal>
               <SectionLabel index="06" coord="OBJECTIONS, DISSOLVED">
@@ -439,8 +357,11 @@ export default function Home() {
         {/* ===================== FINAL CTA ===================== */}
         <section className="relative">
           <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 lg:py-32">
-            <div className="ink relative overflow-hidden rounded-2xl border border-border px-6 py-16 text-center sm:px-12">
-              <div className="grid-survey absolute inset-0 opacity-30" aria-hidden />
+            <div className="glass relative overflow-hidden rounded-2xl px-6 py-16 text-center sm:px-12">
+              <div
+                className="blob left-1/2 -top-16 size-80 -translate-x-1/2 bg-brass/35"
+                aria-hidden
+              />
               <div
                 className="pointer-events-none absolute left-1/2 top-0 h-16 w-px -translate-x-1/2 bg-gradient-to-b from-brass/0 to-brass"
                 aria-hidden

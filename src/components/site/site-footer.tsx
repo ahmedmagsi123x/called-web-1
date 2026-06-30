@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/site/logo";
 
 export function SiteFooter() {
   return (
@@ -9,18 +10,7 @@ export function SiteFooter() {
       <div className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
           <div className="max-w-md">
-            <div className="flex items-center gap-2.5">
-              <span
-                aria-hidden
-                className="relative flex size-7 items-center justify-center rounded-full border border-brass/60"
-              >
-                <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-brass" />
-                <span className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-brass/35" />
-              </span>
-              <span className="text-lg font-semibold tracking-tight">
-                Meridian
-              </span>
-            </div>
+            <Logo />
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Strategy-led marketing for real estate operators ready to scale.
               We build the online presence that books the calls.
