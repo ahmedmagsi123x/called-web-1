@@ -108,7 +108,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 6px);
 
-  --font-display: var(--font-display), ui-serif, Georgia, serif;
+  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
   --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono-coord), ui-monospace, monospace;
 }
@@ -180,8 +180,8 @@
   .display {
     font-family: var(--font-display);
     font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 0.98;
+    letter-spacing: -0.035em;
+    line-height: 0.95;
   }
   .text-brass {
     color: var(--brass);

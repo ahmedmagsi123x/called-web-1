@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Fraunces, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import { Archivo, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-// Variable serif (weight + optical size) — distinctive display face, and its
-// `wght` axis drives the cursor-reactive hero headline.
-const display = Fraunces({
+// Plain, punchy variable grotesque. Its weight + width axes drive the
+// cursor-reactive hero headline.
+const display = Archivo({
   variable: "--font-display",
   subsets: ["latin"],
-  axes: ["opsz"],
+  axes: ["wdth"],
   display: "swap",
 });
 

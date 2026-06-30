@@ -12,8 +12,8 @@ import * as React from "react";
 const SEGMENTS: { text: string; highlight?: boolean; trailingSpace?: boolean }[] =
   [
     { text: "Imagine waking up to", trailingSpace: true },
-    { text: "qualified leads", highlight: true },
-    { text: ", every day." },
+    { text: "qualified leads,", highlight: true },
+    { text: " every day." },
   ];
 
 function Chars({ text }: { text: string }) {
@@ -64,9 +64,10 @@ export function HeroHeadline({ className }: { className?: string }) {
         const cy = r.top + r.height / 2;
         const d = Math.hypot(pointer.x - cx, pointer.y - cy);
         const infl = pointer.active ? Math.max(0, 1 - d / radius) : 0;
-        const w = Math.round(560 + infl * 340); // 560 → 900
-        const sx = (1 + infl * 0.12).toFixed(3);
-        chars[i].style.fontVariationSettings = `"opsz" 110, "wght" ${w}`;
+        const w = Math.round(640 + infl * 260); // 640 → 900
+        const wdth = Math.round(100 + infl * 25); // 100 → 125 (real width axis)
+        const sx = (1 + infl * 0.06).toFixed(3); // tiny extra stretch
+        chars[i].style.fontVariationSettings = `"wght" ${w}, "wdth" ${wdth}`;
         chars[i].style.transform = `scaleX(${sx})`;
       }
       raf = requestAnimationFrame(frame);
