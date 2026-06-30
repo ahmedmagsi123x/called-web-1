@@ -14,7 +14,6 @@ import { SiteFooter } from "@/components/site/site-footer";
 import { Reveal } from "@/components/site/reveal";
 import { SectionLabel } from "@/components/site/section-label";
 import { ParticleField } from "@/components/site/particle-field";
-import { FeaturedServices } from "@/components/site/featured-services";
 import { ServicesMenu } from "@/components/site/services-menu";
 
 const strip = [
@@ -195,13 +194,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ===================== METHOD / PROCESS (glass) ===================== */}
-        <section id="method" className="relative scroll-mt-16 overflow-hidden">
-          <div className="blob -left-16 top-8 size-80 bg-brass/30" aria-hidden />
-          <div
-            className="blob -right-10 bottom-0 size-96 bg-primary/20"
-            aria-hidden
-          />
+        {/* ===================== METHOD / PROCESS (glass on green) ============ */}
+        <section
+          id="method"
+          className="ink relative scroll-mt-16 overflow-hidden"
+        >
+          <div className="grid-survey absolute inset-0 opacity-25" aria-hidden />
           <div className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
             <Reveal>
               <SectionLabel index="02" coord="THE PROCESS">
@@ -240,28 +238,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ===================== SIGNATURE WORK (featured) ===================== */}
-        <section className="relative scroll-mt-16">
-          <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
-            <Reveal>
-              <SectionLabel index="03" coord="SIGNATURE WORK">
-                Where we go deepest
-              </SectionLabel>
-            </Reveal>
-            <Reveal>
-              <h2 className="display mt-8 max-w-3xl text-balance text-4xl sm:text-5xl">
-                Five disciplines we obsess over.
-              </h2>
-            </Reveal>
-            <FeaturedServices />
-          </div>
-        </section>
-
         {/* ===================== WHAT WE DELIVER (interactive menu) ============ */}
         <section id="work" className="relative scroll-mt-16 bg-secondary/30">
           <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
             <Reveal>
-              <SectionLabel index="04" coord="THE FULL MENU">
+              <SectionLabel index="03" coord="THE FULL MENU">
                 What we deliver
               </SectionLabel>
             </Reveal>
@@ -283,7 +264,7 @@ export default function Home() {
             <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
               <Reveal>
                 <div>
-                  <SectionLabel index="05" coord="THE NAME">
+                  <SectionLabel index="04" coord="THE NAME">
                     Why Meridian
                   </SectionLabel>
                   <h2 className="display mt-8 text-balance text-4xl sm:text-5xl">
@@ -332,7 +313,7 @@ export default function Home() {
         <section id="faq" className="relative scroll-mt-16 bg-secondary/30">
           <div className="relative mx-auto max-w-3xl px-5 py-20 sm:px-8 lg:py-28">
             <Reveal>
-              <SectionLabel index="06" coord="OBJECTIONS, DISSOLVED">
+              <SectionLabel index="05" coord="OBJECTIONS, DISSOLVED">
                 Before you book
               </SectionLabel>
             </Reveal>
