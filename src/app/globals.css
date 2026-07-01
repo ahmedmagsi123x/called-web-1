@@ -21,9 +21,9 @@
   --popover: #fff8e6;
   --popover-foreground: #2a2016;
 
-  /* On cream, the strong CTA is bold teal. */
-  --primary: #0e8f86;
-  --primary-foreground: #fdf0d3;
+  /* On the light canvas, the strong CTA is bold blue. */
+  --primary: #2f66e6;
+  --primary-foreground: #ffffff;
 
   --secondary: #ffe1a3;
   --secondary-foreground: #2a2016;
@@ -39,47 +39,106 @@
 
   --border: #ecd7a7;
   --input: #e4cd97;
-  --ring: #ff6b35;
+  --ring: #2f66e6;
 
-  /* signature accent — bright retro orange */
+  /* signature accent — bright orange */
   --brass: #e2551d;
 }
 
 /* Ink surfaces: locally re-map the semantic tokens so every
    shadcn component flips automatically inside `.ink`. */
-.ink {
-  /* bold retro teal block */
-  --background: #0e7a72;
-  --foreground: #fdf0d3;
-
-  --card: #13938a;
-  --card-foreground: #fdf0d3;
-
-  --popover: #13938a;
-  --popover-foreground: #fdf0d3;
-
-  /* On teal, the strong CTA is bright orange. */
-  --primary: #ff6b35;
-  --primary-foreground: #2a1608;
-
-  --secondary: #12a294;
-  --secondary-foreground: #fdf0d3;
-
-  --muted: #12a294;
-  --muted-foreground: #cdeae5;
-
-  --accent: #12a294;
-  --accent-foreground: #fdf0d3;
-
-  --border: color-mix(in oklab, #ffc94b 34%, transparent);
-  --input: color-mix(in oklab, #fdf0d3 22%, transparent);
-  --ring: #ffc94b;
-
-  /* sunny yellow accent pops on teal */
-  --brass: #ffc94b;
-
+/* ---- Bold colour-blocked surfaces. Each remaps the semantic tokens so
+   every child component adapts automatically. ---- */
+.surf-blue,
+.surf-green,
+.surf-yellow,
+.surf-pink {
   background-color: var(--background);
   color: var(--foreground);
+}
+
+.surf-blue {
+  --background: #2f66e6;
+  --foreground: #ffffff;
+  --card: #3f74f0;
+  --card-foreground: #ffffff;
+  --popover: #3f74f0;
+  --popover-foreground: #ffffff;
+  --primary: #ffce33; /* yellow CTA */
+  --primary-foreground: #1b2a5e;
+  --secondary: #4c7ef2;
+  --secondary-foreground: #ffffff;
+  --muted: #4c7ef2;
+  --muted-foreground: #d6e2ff;
+  --accent: #4c7ef2;
+  --accent-foreground: #ffffff;
+  --border: color-mix(in oklab, #ffce33 40%, transparent);
+  --input: color-mix(in oklab, #ffffff 22%, transparent);
+  --ring: #ffce33;
+  --brass: #ffd24a; /* yellow accent */
+}
+
+.surf-green {
+  --background: #1aa862;
+  --foreground: #ffffff;
+  --card: #25b46e;
+  --card-foreground: #ffffff;
+  --popover: #25b46e;
+  --popover-foreground: #ffffff;
+  --primary: #ff6b35; /* orange CTA */
+  --primary-foreground: #2a1608;
+  --secondary: #2cbd77;
+  --secondary-foreground: #ffffff;
+  --muted: #2cbd77;
+  --muted-foreground: #d3f4e3;
+  --accent: #2cbd77;
+  --accent-foreground: #ffffff;
+  --border: color-mix(in oklab, #ffe14a 36%, transparent);
+  --input: color-mix(in oklab, #ffffff 22%, transparent);
+  --ring: #ffe14a;
+  --brass: #ffe14a; /* yellow accent */
+}
+
+.surf-yellow {
+  --background: #ffce33;
+  --foreground: #241c0e;
+  --card: #ffd757;
+  --card-foreground: #241c0e;
+  --popover: #ffd757;
+  --popover-foreground: #241c0e;
+  --primary: #2f66e6; /* blue CTA */
+  --primary-foreground: #ffffff;
+  --secondary: #ffdd78;
+  --secondary-foreground: #241c0e;
+  --muted: #ffdd78;
+  --muted-foreground: #6d5a24;
+  --accent: #ffdd78;
+  --accent-foreground: #241c0e;
+  --border: color-mix(in oklab, #241c0e 16%, transparent);
+  --input: color-mix(in oklab, #241c0e 22%, transparent);
+  --ring: #2f66e6;
+  --brass: #e2551d; /* orange accent */
+}
+
+.surf-pink {
+  --background: #e8468f;
+  --foreground: #ffffff;
+  --card: #ec5b9c;
+  --card-foreground: #ffffff;
+  --popover: #ec5b9c;
+  --popover-foreground: #ffffff;
+  --primary: #ffce33; /* yellow CTA */
+  --primary-foreground: #3a1024;
+  --secondary: #ec5b9c;
+  --secondary-foreground: #ffffff;
+  --muted: #ec5b9c;
+  --muted-foreground: #ffdcec;
+  --accent: #ec5b9c;
+  --accent-foreground: #ffffff;
+  --border: color-mix(in oklab, #ffce33 38%, transparent);
+  --input: color-mix(in oklab, #ffffff 22%, transparent);
+  --ring: #ffce33;
+  --brass: #ffd24a; /* yellow accent */
 }
 
 @theme inline {

@@ -41,10 +41,14 @@ const services: Service[] = [
   { no: "10", icon: Compass, title: "Strategy & consulting", outcome: "A clear plan that ties every asset to real commercial growth.", img: "/services/strategy.png" },
 ];
 
+// Playful accent cycle: blue, orange, amber, pink, green.
+const ACCENTS = ["#2f66e6", "#ff6b35", "#e09400", "#e8468f", "#1aa862"];
+
 export function ServicesMenu() {
   const [active, setActive] = React.useState(0);
   const current = services[active];
   const Icon = current.icon;
+  const currentAccent = ACCENTS[active % ACCENTS.length];
 
   return (
     <div className="mt-14 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
@@ -53,6 +57,7 @@ export function ServicesMenu() {
         {services.map((s, i) => {
           const RowIcon = s.icon;
           const isActive = i === active;
+          const accent = ACCENTS[i % ACCENTS.length];
           return (
             <li key={s.no} className="border-b border-border">
               <Link
@@ -62,18 +67,17 @@ export function ServicesMenu() {
                 onFocus={() => setActive(i)}
               >
                 <span
-                  className={cn(
-                    "coord w-7 shrink-0 transition-colors",
-                    isActive ? "text-brass" : "text-muted-foreground",
-                  )}
+                  className="coord w-7 shrink-0 font-medium"
+                  style={{ color: accent }}
                 >
                   {s.no}
                 </span>
                 <RowIcon
                   className={cn(
                     "size-5 shrink-0 transition-colors",
-                    isActive ? "text-brass" : "text-muted-foreground",
+                    !isActive && "text-muted-foreground",
                   )}
+                  style={isActive ? { color: accent } : undefined}
                 />
                 <span
                   className={cn(
@@ -89,9 +93,10 @@ export function ServicesMenu() {
                   className={cn(
                     "size-5 shrink-0 transition-all duration-300",
                     isActive
-                      ? "translate-x-0 text-brass opacity-100"
+                      ? "translate-x-0 opacity-100"
                       : "-translate-x-2 opacity-0",
                   )}
+                  style={isActive ? { color: accent } : undefined}
                 />
               </Link>
             </li>
@@ -103,9 +108,15 @@ export function ServicesMenu() {
       <div className="hidden lg:block">
         <div className="sticky top-24">
           <div className="glass relative overflow-hidden rounded-2xl p-8">
-            <div className="blob -right-10 -top-10 size-44 bg-brass/40" aria-hidden />
+            <div
+              className="blob -right-10 -top-10 size-44"
+              style={{ backgroundColor: `${currentAccent}66` }}
+              aria-hidden
+            />
             <div className="relative">
-              <span className="coord text-brass">{current.no} — featured</span>
+              <span className="coord font-medium" style={{ color: currentAccent }}>
+                {current.no} — featured
+              </span>
 
               <div className="mt-6 flex h-44 items-center justify-center">
                 {current.img ? (
@@ -119,7 +130,12 @@ export function ServicesMenu() {
                 ) : (
                   <span
                     key={current.no}
-                    className="flex size-24 items-center justify-center rounded-2xl border border-brass/40 bg-brass/10 text-brass"
+                    className="flex size-24 items-center justify-center rounded-2xl border"
+                    style={{
+                      color: currentAccent,
+                      borderColor: `${currentAccent}66`,
+                      backgroundColor: `${currentAccent}1a`,
+                    }}
                   >
                     <Icon className="size-10" />
                   </span>
@@ -130,7 +146,8 @@ export function ServicesMenu() {
               <p className="mt-3 text-muted-foreground">{current.outcome}</p>
               <Link
                 href="/contact"
-                className="coord mt-6 inline-flex items-center gap-1.5 text-brass hover:underline"
+                className="coord mt-6 inline-flex items-center gap-1.5 font-medium hover:underline"
+                style={{ color: currentAccent }}
               >
                 Start here <ArrowUpRight className="size-3.5" />
               </Link>

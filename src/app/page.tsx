@@ -82,7 +82,7 @@ export default function Home() {
       <SiteHeader />
       <main className="flex-1">
         {/* ===================== HERO ===================== */}
-        <section className="ink relative flex min-h-[88vh] items-center overflow-hidden">
+        <section className="surf-blue relative flex min-h-[88vh] items-center overflow-hidden">
           {/* Optional background video — drop a file at /public/hero.mp4 and
               uncomment to use it instead of (or behind) the ember field.
           <video
@@ -93,7 +93,7 @@ export default function Home() {
           <div className="grid-survey absolute inset-0 opacity-30" aria-hidden />
           <ParticleField className="absolute inset-0 h-full w-full" />
           <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(8,70,66,0.55)_100%)]"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(16,36,110,0.5)_100%)]"
             aria-hidden
           />
 
@@ -201,7 +201,7 @@ export default function Home() {
         {/* ===================== METHOD / PROCESS (glass on green) ============ */}
         <section
           id="method"
-          className="ink relative scroll-mt-16 overflow-hidden"
+          className="surf-green relative scroll-mt-16 overflow-hidden"
         >
           <div className="grid-survey absolute inset-0 opacity-25" aria-hidden />
           <div className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
@@ -262,8 +262,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ===================== WHY MERIDIAN ===================== */}
-        <section className="relative scroll-mt-16">
+        {/* ===================== WHY MERIDIAN (yellow) ===================== */}
+        <section className="surf-yellow relative scroll-mt-16">
           <div className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
             <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
               <Reveal>
@@ -314,7 +314,7 @@ export default function Home() {
         </section>
 
         {/* ===================== FAQ ===================== */}
-        <section id="faq" className="relative scroll-mt-16 bg-secondary/30">
+        <section id="faq" className="relative scroll-mt-16">
           <div className="relative mx-auto max-w-3xl px-5 py-20 sm:px-8 lg:py-28">
             <Reveal>
               <SectionLabel index="05" coord="OBJECTIONS, DISSOLVED">
@@ -339,18 +339,11 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ===================== FINAL CTA ===================== */}
+        {/* ===================== FINAL CTA (pink) ===================== */}
         <section className="relative">
           <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 lg:py-32">
-            <div className="glass relative overflow-hidden rounded-2xl px-6 py-16 text-center sm:px-12">
-              <div
-                className="blob left-1/2 -top-16 size-80 -translate-x-1/2 bg-brass/35"
-                aria-hidden
-              />
-              <div
-                className="pointer-events-none absolute left-1/2 top-0 h-16 w-px -translate-x-1/2 bg-gradient-to-b from-brass/0 to-brass"
-                aria-hidden
-              />
+            <div className="surf-pink relative overflow-hidden rounded-3xl px-6 py-16 text-center sm:px-12">
+              <div className="grid-survey absolute inset-0 opacity-30" aria-hidden />
               <Reveal className="relative">
                 <span className="coord text-brass">THE INVITATION</span>
                 <h2 className="display mx-auto mt-6 max-w-3xl text-balance text-4xl sm:text-6xl">

@@ -37,8 +37,9 @@ export function ParticleField({ className }: { className?: string }) {
     const pointer = { x: -9999, y: -9999, active: false };
 
     const colors = [
-      [255, 107, 53], // retro orange
-      [255, 201, 75], // sunny yellow
+      [255, 206, 51], // yellow
+      [255, 92, 156], // pink
+      [255, 107, 53], // orange
       [253, 240, 211], // cream
     ];
 
