@@ -15,7 +15,6 @@ import { Reveal } from "@/components/site/reveal";
 import { SectionLabel } from "@/components/site/section-label";
 import { ParticleField } from "@/components/site/particle-field";
 import { ServicesMenu } from "@/components/site/services-menu";
-import { HeroHeadline } from "@/components/site/hero-headline";
 
 const strip = [
   "YouTube",
@@ -94,7 +93,7 @@ export default function Home() {
           <div className="grid-survey absolute inset-0 opacity-30" aria-hidden />
           <ParticleField className="absolute inset-0 h-full w-full" />
           <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(28,58,48,0.55)_100%)]"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(8,70,66,0.55)_100%)]"
             aria-hidden
           />
 
@@ -110,7 +109,13 @@ export default function Home() {
             </Reveal>
 
             <Reveal delay={80}>
-              <HeroHeadline className="display mt-7 text-balance text-5xl text-foreground sm:text-6xl lg:text-7xl" />
+              <h1 className="display mt-7 text-balance text-5xl text-foreground sm:text-6xl lg:text-7xl">
+                Imagine waking up to{" "}
+                <span className="plot whitespace-nowrap text-brass">
+                  qualified leads,
+                </span>{" "}
+                every day.
+              </h1>
             </Reveal>
 
             <Reveal delay={160}>
@@ -125,7 +130,7 @@ export default function Home() {
 
             <Reveal delay={240}>
               <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <Button asChild variant="brass" size="lg">
+                <Button asChild variant="default" size="lg">
                   <Link href="/contact">
                     Book your call <ArrowRight />
                   </Link>
@@ -296,7 +301,7 @@ export default function Home() {
                       key={b.k}
                       className="rounded-xl border border-border bg-card p-6"
                     >
-                      <Badge variant="brass">{b.k}</Badge>
+                      <Badge variant="default">{b.k}</Badge>
                       <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                         {b.v}
                       </p>
@@ -358,7 +363,7 @@ export default function Home() {
                   the presence that compounds it.
                 </p>
                 <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                  <Button asChild variant="brass" size="lg">
+                  <Button asChild variant="default" size="lg">
                     <Link href="/contact">
                       Book your call <ArrowRight />
                     </Link>

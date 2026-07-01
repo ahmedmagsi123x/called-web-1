@@ -9,73 +9,74 @@
    ============================================================ */
 
 :root {
-  --radius: 0.75rem;
+  --radius: 0.85rem;
 
-  /* whitish vanilla canvas — the dominant surface */
-  --background: #f9f4e8;
-  --foreground: #213d33;
+  /* Bright retro palette: cream canvas, bold teal blocks, orange + yellow. */
+  --background: #fdf0d3;
+  --foreground: #2a2016;
 
-  --card: #fffaf0;
-  --card-foreground: #213d33;
+  --card: #fff8e6;
+  --card-foreground: #2a2016;
 
-  --popover: #fffaf0;
-  --popover-foreground: #213d33;
+  --popover: #fff8e6;
+  --popover-foreground: #2a2016;
 
-  /* On vanilla, the strong CTA is a softened green. */
-  --primary: #2a5446;
-  --primary-foreground: #f9f4e8;
+  /* On cream, the strong CTA is bold teal. */
+  --primary: #0e8f86;
+  --primary-foreground: #fdf0d3;
 
-  --secondary: #efe7d4;
-  --secondary-foreground: #213d33;
+  --secondary: #ffe1a3;
+  --secondary-foreground: #2a2016;
 
-  --muted: #efe7d4;
-  --muted-foreground: #64715f;
+  --muted: #f6e5bf;
+  --muted-foreground: #7c6b4e;
 
-  --accent: #efe7d4;
-  --accent-foreground: #213d33;
+  --accent: #ffe1a3;
+  --accent-foreground: #2a2016;
 
-  --destructive: #a83a2c;
-  --destructive-foreground: #f9f4e8;
+  --destructive: #d5402b;
+  --destructive-foreground: #fff8e6;
 
-  --border: #e6ddca;
-  --input: #ddd3bc;
-  --ring: #d2701c;
+  --border: #ecd7a7;
+  --input: #e4cd97;
+  --ring: #ff6b35;
 
-  /* signature accent — warm, lighter orange */
-  --brass: #cb6a1c;
+  /* signature accent — bright retro orange */
+  --brass: #e2551d;
 }
 
 /* Ink surfaces: locally re-map the semantic tokens so every
    shadcn component flips automatically inside `.ink`. */
 .ink {
-  /* lighter, softer green surface — used sparingly (hero + footer) */
-  --background: #234a3c;
-  --foreground: #f3eddf;
+  /* bold retro teal block */
+  --background: #0e7a72;
+  --foreground: #fdf0d3;
 
-  --card: #2b5848;
-  --card-foreground: #f3eddf;
+  --card: #13938a;
+  --card-foreground: #fdf0d3;
 
-  --popover: #2b5848;
-  --popover-foreground: #f3eddf;
+  --popover: #13938a;
+  --popover-foreground: #fdf0d3;
 
-  /* On green, the strong CTA is a light orange. */
-  --primary: #f2964c;
-  --primary-foreground: #1c3a30;
+  /* On teal, the strong CTA is bright orange. */
+  --primary: #ff6b35;
+  --primary-foreground: #2a1608;
 
-  --secondary: #2f5e4c;
-  --secondary-foreground: #f3eddf;
+  --secondary: #12a294;
+  --secondary-foreground: #fdf0d3;
 
-  --muted: #2f5e4c;
-  --muted-foreground: #b6c8bb;
+  --muted: #12a294;
+  --muted-foreground: #cdeae5;
 
-  --accent: #2f5e4c;
-  --accent-foreground: #f3eddf;
+  --accent: #12a294;
+  --accent-foreground: #fdf0d3;
 
-  --border: color-mix(in oklab, #f6a25a 26%, transparent);
-  --input: color-mix(in oklab, #f3eddf 18%, transparent);
-  --ring: #f6a25a;
+  --border: color-mix(in oklab, #ffc94b 34%, transparent);
+  --input: color-mix(in oklab, #fdf0d3 22%, transparent);
+  --ring: #ffc94b;
 
-  --brass: #f6a25a;
+  /* sunny yellow accent pops on teal */
+  --brass: #ffc94b;
 
   background-color: var(--background);
   color: var(--foreground);
@@ -287,10 +288,10 @@
     box-shadow:
       0 18px 50px -20px color-mix(in oklab, #102a20 70%, transparent),
       inset 0 1px 0 0 color-mix(in oklab, #ffffff 70%, transparent);
-    color: #213d33;
-    --foreground: #213d33;
-    --muted-foreground: #5f6e62;
-    --brass: #c5651a;
+    color: #2a2016;
+    --foreground: #2a2016;
+    --muted-foreground: #7c6b4e;
+    --brass: #e2551d;
   }
 
   /* Soft blurred color blob for backdrops */

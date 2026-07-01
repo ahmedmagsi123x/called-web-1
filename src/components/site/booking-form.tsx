@@ -113,7 +113,7 @@ export function BookingForm() {
           </FieldDescription>
         </Field>
 
-        <Button type="submit" variant="brass" size="lg" className="w-full sm:w-auto">
+        <Button type="submit" variant="default" size="lg" className="w-full sm:w-auto">
           Request my call <ArrowRight />
         </Button>
       </FieldGroup>

@@ -18,7 +18,7 @@ export function SiteFooter() {
           </div>
 
           <div className="flex flex-col items-start gap-4 md:items-end">
-            <Button asChild variant="brass" size="lg">
+            <Button asChild variant="default" size="lg">
               <Link href="/contact">Book a call</Link>
             </Button>
             <a

@@ -37,9 +37,9 @@ export function ParticleField({ className }: { className?: string }) {
     const pointer = { x: -9999, y: -9999, active: false };
 
     const colors = [
-      [232, 125, 42], // orange
-      [239, 138, 53], // bright orange
-      [241, 235, 219], // vanilla
+      [255, 107, 53], // retro orange
+      [255, 201, 75], // sunny yellow
+      [253, 240, 211], // cream
     ];
 
     function resize() {
