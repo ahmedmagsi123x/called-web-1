@@ -85,17 +85,18 @@ export default function Home() {
         <section className="surf-blue relative flex min-h-[88vh] items-center overflow-hidden">
           {/* backdrop image: slow zoom, fades to black on scroll */}
           <HeroBackdrop />
-          {/* blue tint sits ON TOP of the image + its black fade */}
+          {/* lighter blue tint so the mountain reads through */}
           <div
-            className="pointer-events-none absolute inset-0 bg-[#183a9e]/60"
+            className="pointer-events-none absolute inset-0 bg-[#1f4bc4]/30 mix-blend-multiply"
             aria-hidden
           />
+          {/* edge vignette frames the image and helps legibility */}
           <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(12,28,88,0.6)_100%)]"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_28%,rgba(7,16,52,0.66)_100%)]"
             aria-hidden
           />
 
-          <div className="relative mx-auto w-full max-w-3xl px-5 py-24 text-center sm:px-8">
+          <div className="relative mx-auto w-full max-w-3xl px-5 py-24 text-center [text-shadow:0_1px_24px_rgba(6,14,40,0.55)] sm:px-8">
             <Reveal>
               <div className="mx-auto flex w-fit items-center gap-3">
                 <span className="h-px w-8 bg-brass/60" aria-hidden />
