@@ -337,6 +337,20 @@
     animation: sweep 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
+  /* Very slow ambient zoom for the hero backdrop image */
+  @keyframes kenburns {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.16);
+    }
+  }
+  .kenburns {
+    transform-origin: center;
+    animation: kenburns 26s ease-in-out infinite alternate;
+  }
+
   /* Glassmorphism card — self-contained light panel (dark text + readable
      orange accents) so it reads correctly on any surface, green included. */
   .glass {

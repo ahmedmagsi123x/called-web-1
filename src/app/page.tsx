@@ -13,8 +13,8 @@ import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
 import { Reveal } from "@/components/site/reveal";
 import { SectionLabel } from "@/components/site/section-label";
-import { ParticleField } from "@/components/site/particle-field";
 import { ServicesMenu } from "@/components/site/services-menu";
+import { HeroBackdrop } from "@/components/site/hero-backdrop";
 
 const strip = [
   "YouTube",
@@ -83,17 +83,15 @@ export default function Home() {
       <main className="flex-1">
         {/* ===================== HERO ===================== */}
         <section className="surf-blue relative flex min-h-[88vh] items-center overflow-hidden">
-          {/* Optional background video — drop a file at /public/hero.mp4 and
-              uncomment to use it instead of (or behind) the ember field.
-          <video
-            className="absolute inset-0 h-full w-full object-cover opacity-40"
-            autoPlay muted loop playsInline
-            src="/hero.mp4"
-          /> */}
-          <div className="grid-survey absolute inset-0 opacity-30" aria-hidden />
-          <ParticleField className="absolute inset-0 h-full w-full" />
+          {/* backdrop image: slow zoom, fades to black on scroll */}
+          <HeroBackdrop />
+          {/* blue tint sits ON TOP of the image + its black fade */}
           <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(16,36,110,0.5)_100%)]"
+            className="pointer-events-none absolute inset-0 bg-[#183a9e]/60"
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,rgba(12,28,88,0.6)_100%)]"
             aria-hidden
           />
 
