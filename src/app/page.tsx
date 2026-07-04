@@ -85,14 +85,15 @@ export default function Home() {
         <section className="surf-blue relative flex min-h-[88vh] items-center overflow-hidden">
           {/* backdrop image: slow zoom, fades to black on scroll */}
           <HeroBackdrop />
-          {/* lighter blue tint so the mountain reads through */}
+          {/* very light brand tint — keeps the mountain clearly visible */}
           <div
-            className="pointer-events-none absolute inset-0 bg-[#1f4bc4]/30 mix-blend-multiply"
+            className="pointer-events-none absolute inset-0 bg-[#12327f]/20 mix-blend-multiply"
             aria-hidden
           />
-          {/* edge vignette frames the image and helps legibility */}
+          {/* soft dark scrim focused behind the centered copy for premium,
+              readable text while the image still shows around the edges */}
           <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_28%,rgba(7,16,52,0.66)_100%)]"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_62%_58%_at_50%_46%,rgba(5,12,40,0.62)_0%,rgba(5,12,40,0.28)_45%,transparent_72%)]"
             aria-hidden
           />
 
