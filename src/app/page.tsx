@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, Microscope, Sparkles, Clapperboard } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import {
   Accordion,
   AccordionContent,
@@ -12,41 +11,21 @@ import {
 import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
 import { Reveal } from "@/components/site/reveal";
-import { SectionLabel } from "@/components/site/section-label";
-import { ServicesMenu } from "@/components/site/services-menu";
-import { HeroBackdrop } from "@/components/site/hero-backdrop";
+import { IntroSplash } from "@/components/site/intro-splash";
+import { HeroStage } from "@/components/site/hero-stage";
+import { StatementBand } from "@/components/site/statement-band";
+import { ServicesBoxes } from "@/components/site/services-boxes";
+import { ProcessShowcase } from "@/components/site/process-showcase";
 
 const strip = [
   "YouTube",
-  "Short-form",
-  "AI video",
-  "Social",
-  "Copywriting",
-  "Paid ads",
+  "Social Media Management",
+  "Paid Ads",
+  "Email Marketing",
+  "Short Form",
+  "AI Video",
   "Branding",
   "Strategy",
-  "Reporting",
-];
-
-const method = [
-  {
-    icon: Microscope,
-    step: "01",
-    title: "Research",
-    body: "Our meticulous research process helps us uncover the insights and create work that resonates with the right people and delivers lasting commercial value.",
-  },
-  {
-    icon: Sparkles,
-    step: "02",
-    title: "Strategy & creative",
-    body: "We turn those insights into positioning, message, and creative that helps you build authority, communicate with clarity, and relate with the right audience.",
-  },
-  {
-    icon: Clapperboard,
-    step: "03",
-    title: "Production",
-    body: "A rigorous production process allows us to maintain precision and quality across every piece of content — on every platform.",
-  },
 ];
 
 const faqs = [
@@ -79,78 +58,15 @@ const faqs = [
 export default function Home() {
   return (
     <>
+      <IntroSplash />
       <SiteHeader />
       <main className="flex-1">
-        {/* ===================== HERO ===================== */}
-        <section className="surf-blue relative flex min-h-[88vh] items-center overflow-hidden">
-          {/* backdrop image: slow zoom, fades to black on scroll */}
-          <HeroBackdrop />
-          {/* very light brand tint — keeps the mountain clearly visible */}
-          <div
-            className="pointer-events-none absolute inset-0 bg-[#12327f]/20 mix-blend-multiply"
-            aria-hidden
-          />
-          {/* soft dark scrim focused behind the centered copy for premium,
-              readable text while the image still shows around the edges */}
-          <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_62%_58%_at_50%_46%,rgba(5,12,40,0.62)_0%,rgba(5,12,40,0.28)_45%,transparent_72%)]"
-            aria-hidden
-          />
-
-          <div className="relative mx-auto w-full max-w-3xl px-5 py-24 text-center [text-shadow:0_1px_24px_rgba(6,14,40,0.55)] sm:px-8">
-            <Reveal>
-              <div className="mx-auto flex w-fit items-center gap-3">
-                <span className="h-px w-8 bg-brass/60" aria-hidden />
-                <span className="coord text-brass">
-                  For operators ready to scale
-                </span>
-                <span className="h-px w-8 bg-brass/60" aria-hidden />
-              </div>
-            </Reveal>
-
-            <Reveal delay={80}>
-              <h1 className="display mt-7 text-balance text-5xl text-foreground sm:text-6xl lg:text-7xl">
-                Imagine waking up to{" "}
-                <span className="plot whitespace-nowrap text-brass">
-                  qualified leads,
-                </span>{" "}
-                every day.
-              </h1>
-            </Reveal>
-
-            <Reveal delay={160}>
-              <p className="mx-auto mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                A dominant online presence is the ultimate unfair advantage.
-                <span className="mt-3 block">
-                  Meridian provides strategy-led marketing solutions for real
-                  estate operators who are ready to scale.
-                </span>
-              </p>
-            </Reveal>
-
-            <Reveal delay={240}>
-              <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <Button asChild variant="default" size="lg">
-                  <Link href="/contact">
-                    Book your call <ArrowRight />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="#method">See how it works</Link>
-                </Button>
-              </div>
-            </Reveal>
-
-            <Reveal delay={320}>
-              <p className="coord mt-10">
-                Wholesalers · Investors · Developers · Brokerages
-              </p>
-            </Reveal>
-          </div>
-
-          {/* capability strip — right-to-left marquee */}
-          <div className="marquee absolute inset-x-0 bottom-0 border-t border-border">
-            <div className="marquee-track py-4">
+        {/* ============ HERO: duotone peaks, ribbon, person ============ */}
+        <section className="relative overflow-hidden bg-[#1c1468]">
+          <HeroStage />
+          {/* services marquee — right to left */}
+          <div className="marquee absolute inset-x-0 bottom-0 border-t border-white/15 bg-[#241a8a]/85 backdrop-blur-sm">
+            <div className="marquee-track py-3.5">
               {[0, 1].map((rep) => (
                 <div
                   key={rep}
@@ -160,10 +76,10 @@ export default function Home() {
                   {strip.map((c) => (
                     <span
                       key={c}
-                      className="coord flex items-center whitespace-nowrap"
+                      className="coord flex items-center whitespace-nowrap !text-[#d9d3f4]"
                     >
                       <span className="px-7">{c}</span>
-                      <span className="text-brass">•</span>
+                      <span className="text-gold">•</span>
                     </span>
                   ))}
                 </div>
@@ -172,162 +88,37 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ===================== TRUST IS SCARCE (thesis) ===================== */}
-        <section className="relative">
-          <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
-            <Reveal>
-              <SectionLabel index="01" coord="41.8°N — THE THESIS">
-                Trust is scarce
-              </SectionLabel>
-            </Reveal>
-            <div className="mt-10 grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-end">
-              <Reveal>
-                <h2 className="display text-4xl text-balance sm:text-5xl">
-                  How you&apos;re perceived increasingly shapes your growth.
-                </h2>
-              </Reveal>
-              <Reveal delay={120}>
-                <p className="text-lg leading-relaxed text-muted-foreground">
-                  We&apos;re a full-service branding agency helping real estate
-                  operators strengthen their reputation, expand their influence,
-                  and grow their business. Everything we do is grounded in a deep
-                  understanding of the industry.
-                </p>
-              </Reveal>
-            </div>
+        {/* ============ STATEMENT BAND ============ */}
+        <StatementBand />
+
+        {/* ============ OUR SERVICES ============ */}
+        <ServicesBoxes />
+
+        {/* ============ OUR PROCESS ============ */}
+        <ProcessShowcase />
+
+        {/* ============ HANDWRITTEN BAND ============ */}
+        <section className="halftone bg-chartreuse">
+          <div className="mx-auto max-w-4xl px-5 py-14 text-center sm:px-8">
+            <p className="font-hand -rotate-1 text-[clamp(1.8rem,4.5vw,3.2rem)] font-bold leading-tight text-[#1c1c10]">
+              A dominant online presence is the ultimate unfair advantage.
+            </p>
           </div>
         </section>
 
-        {/* ===================== METHOD / PROCESS (glass on green) ============ */}
-        <section
-          id="method"
-          className="surf-green relative scroll-mt-16 overflow-hidden"
-        >
-          <div className="grid-survey absolute inset-0 opacity-25" aria-hidden />
-          <div className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
+        {/* ============ FAQ ============ */}
+        <section id="faq" className="scroll-mt-24">
+          <div className="mx-auto max-w-4xl px-5 py-16 sm:px-8 lg:py-24">
             <Reveal>
-              <SectionLabel index="02" coord="THE PROCESS">
-                Research in, authority out
-              </SectionLabel>
-            </Reveal>
-            <Reveal>
-              <h2 className="display mt-8 max-w-3xl text-balance text-4xl sm:text-5xl">
-                Precision and quality, held across every piece of content.
+              <h2 className="head-italic text-[clamp(2.2rem,5.5vw,4rem)] text-[#151510]">
+                Frequently Asked
+                <br />
+                Questions
               </h2>
             </Reveal>
-
-            <div className="mt-14 grid gap-6 md:grid-cols-3">
-              {method.map((m, i) => {
-                const Icon = m.icon;
-                return (
-                  <Reveal key={m.step} delay={i * 100}>
-                    <div className="glass relative h-full rounded-2xl p-7">
-                      <div className="flex items-center justify-between">
-                        <span className="flex size-11 items-center justify-center rounded-full border border-brass/40 bg-brass/10 text-brass">
-                          <Icon className="size-5" />
-                        </span>
-                        <span className="display text-3xl text-brass/50">
-                          {m.step}
-                        </span>
-                      </div>
-                      <h3 className="mt-6 text-xl font-semibold">{m.title}</h3>
-                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                        {m.body}
-                      </p>
-                    </div>
-                  </Reveal>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* ===================== WHAT WE DELIVER (interactive menu) ============ */}
-        <section id="work" className="relative scroll-mt-16 bg-secondary/30">
-          <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
-            <Reveal>
-              <SectionLabel index="03" coord="THE FULL MENU">
-                What we deliver
-              </SectionLabel>
-            </Reveal>
-            <Reveal>
-              <h2 className="display mt-8 max-w-4xl text-balance text-3xl leading-tight sm:text-4xl">
-                We deliver strategy, creative, content, and production across
-                every social platform — helping real estate operators build
-                authority, communicate with clarity, and relate with the right
-                audience.
-              </h2>
-            </Reveal>
-            <ServicesMenu />
-          </div>
-        </section>
-
-        {/* ===================== WHY MERIDIAN (yellow) ===================== */}
-        <section className="surf-yellow relative scroll-mt-16">
-          <div className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 lg:py-28">
-            <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-              <Reveal>
-                <div>
-                  <SectionLabel index="04" coord="THE NAME">
-                    Why Meridian
-                  </SectionLabel>
-                  <h2 className="display mt-8 text-balance text-4xl sm:text-5xl">
-                    The name your market navigates by.
-                  </h2>
-                  <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                    A meridian is the line everything is measured against.
-                    That&apos;s the position we build for you: the default, the
-                    reference, the operator the rest of the market is compared to.
-                  </p>
-                </div>
-              </Reveal>
-              <Reveal delay={120}>
-                <div className="grid gap-4 sm:grid-cols-3">
-                  {[
-                    {
-                      k: "Grounded",
-                      v: "Everything starts from a deep understanding of how real estate actually works.",
-                    },
-                    {
-                      k: "Researched",
-                      v: "A meticulous research process uncovers what resonates with the right people.",
-                    },
-                    {
-                      k: "Produced",
-                      v: "A rigorous production process holds precision and quality across every piece.",
-                    },
-                  ].map((b) => (
-                    <div
-                      key={b.k}
-                      className="rounded-xl border border-border bg-card p-6"
-                    >
-                      <Badge variant="default">{b.k}</Badge>
-                      <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                        {b.v}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </section>
-
-        {/* ===================== FAQ ===================== */}
-        <section id="faq" className="relative scroll-mt-16">
-          <div className="relative mx-auto max-w-3xl px-5 py-20 sm:px-8 lg:py-28">
-            <Reveal>
-              <SectionLabel index="05" coord="OBJECTIONS, DISSOLVED">
-                Before you book
-              </SectionLabel>
-            </Reveal>
-            <Reveal>
-              <h2 className="display mt-8 text-balance text-4xl sm:text-5xl">
-                The honest answers.
-              </h2>
-            </Reveal>
+            <div className="mt-3 h-px w-full bg-black/20" aria-hidden />
             <Reveal delay={120}>
-              <Accordion type="single" collapsible className="mt-10">
+              <Accordion type="single" collapsible className="mt-8">
                 {faqs.map((f) => (
                   <AccordionItem key={f.q} value={f.q}>
                     <AccordionTrigger>{f.q}</AccordionTrigger>
@@ -339,34 +130,42 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ===================== FINAL CTA (pink) ===================== */}
-        <section className="relative">
-          <div className="mx-auto max-w-6xl px-5 py-24 sm:px-8 lg:py-32">
-            <div className="surf-pink relative overflow-hidden rounded-3xl px-6 py-16 text-center sm:px-12">
-              <div className="grid-survey absolute inset-0 opacity-30" aria-hidden />
-              <Reveal className="relative">
-                <span className="coord text-brass">THE INVITATION</span>
-                <h2 className="display mx-auto mt-6 max-w-3xl text-balance text-4xl sm:text-6xl">
-                  We help turn your expertise into recognition, trust, and
-                  increased market demand.
+        {/* ============ PINK CTA CARD ============ */}
+        <section className="relative pb-24 pt-6">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8">
+            <Reveal from="scale">
+              <div className="rounded-[2.5rem] bg-pinkcard px-6 py-16 text-center shadow-[0_50px_90px_-25px_rgba(110,40,90,0.55)] sm:px-12 sm:py-20">
+                <span className="coord !text-[#7c2f6b]">THE INVITATION</span>
+                <h2 className="font-heading mx-auto mt-5 max-w-3xl text-balance text-3xl font-extrabold uppercase leading-tight tracking-tight text-[#3c0f38] sm:text-5xl">
+                  We turn your expertise into recognition, trust, and increased
+                  market demand.
                 </h2>
-                <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+                <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-[#5d2153]">
                   One call. We&apos;ll map your market, show you where your
-                  reputation is leaking, and tell you straight how we&apos;d build
-                  the presence that compounds it.
+                  reputation is leaking, and tell you straight how we&apos;d
+                  build the presence that compounds it.
                 </p>
-                <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                  <Button asChild variant="default" size="lg">
+                <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="rounded-full bg-[#16156b] px-8 text-white hover:bg-[#16156b]"
+                  >
                     <Link href="/contact">
                       Book your call <ArrowRight />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg">
-                    <Link href="#work">See what we deliver</Link>
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="outline"
+                    className="rounded-full border-[#3c0f38]/40 px-8 text-[#3c0f38] hover:bg-[#3c0f38]/10 hover:text-[#3c0f38]"
+                  >
+                    <Link href="/#services">See what we deliver</Link>
                   </Button>
                 </div>
-              </Reveal>
-            </div>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>

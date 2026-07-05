@@ -11,38 +11,45 @@
 :root {
   --radius: 0.85rem;
 
-  /* Bright retro palette: cream canvas, bold teal blocks, orange + yellow. */
-  --background: #fdf0d3;
-  --foreground: #2a2016;
+  /* Poster palette from the mock: khaki-cream canvas, royal blue, gold,
+     chartreuse, ribbon red, pink, navy. */
+  --background: #f1ecd9;
+  --foreground: #191512;
 
-  --card: #fff8e6;
-  --card-foreground: #2a2016;
+  --card: #faf6e8;
+  --card-foreground: #191512;
 
-  --popover: #fff8e6;
-  --popover-foreground: #2a2016;
+  --popover: #faf6e8;
+  --popover-foreground: #191512;
 
-  /* On the light canvas, the strong CTA is bold blue. */
-  --primary: #2f66e6;
+  --primary: #2b3fd6;
   --primary-foreground: #ffffff;
 
-  --secondary: #ffe1a3;
-  --secondary-foreground: #2a2016;
+  --secondary: #e6dfc6;
+  --secondary-foreground: #191512;
 
-  --muted: #f6e5bf;
-  --muted-foreground: #7c6b4e;
+  --muted: #e6dfc6;
+  --muted-foreground: #6f6852;
 
-  --accent: #ffe1a3;
-  --accent-foreground: #2a2016;
+  --accent: #e6dfc6;
+  --accent-foreground: #191512;
 
-  --destructive: #d5402b;
-  --destructive-foreground: #fff8e6;
+  --destructive: #b5342a;
+  --destructive-foreground: #faf6e8;
 
-  --border: #ecd7a7;
-  --input: #e4cd97;
-  --ring: #2f66e6;
+  --border: #dcd4b8;
+  --input: #d2c9a9;
+  --ring: #2b3fd6;
 
-  /* signature accent — bright orange */
+  /* signature accents */
   --brass: #e2551d;
+  --royal: #2b3fd6;
+  --chartreuse: #d8e21f;
+  --ribbon: #b5342a;
+  --gold: #f5b31a;
+  --star: #f4e900;
+  --pinkcard: #f9b0f4;
+  --navy: #16156b;
 }
 
 /* Ink surfaces: locally re-map the semantic tokens so every
@@ -52,9 +59,55 @@
 .surf-blue,
 .surf-green,
 .surf-yellow,
-.surf-pink {
+.surf-pink,
+.surf-royal,
+.surf-navy {
   background-color: var(--background);
   color: var(--foreground);
+}
+
+/* Royal blue poster block — OUR SERVICES */
+.surf-royal {
+  --background: #2b3fd6;
+  --foreground: #ffffff;
+  --card: #3a4de0;
+  --card-foreground: #ffffff;
+  --popover: #3a4de0;
+  --popover-foreground: #ffffff;
+  --primary: #f4e900;
+  --primary-foreground: #1c1e5e;
+  --secondary: #3a4de0;
+  --secondary-foreground: #ffffff;
+  --muted: #3a4de0;
+  --muted-foreground: #ccd4ff;
+  --accent: #3a4de0;
+  --accent-foreground: #ffffff;
+  --border: color-mix(in oklab, #ffffff 30%, transparent);
+  --input: color-mix(in oklab, #ffffff 22%, transparent);
+  --ring: #f4e900;
+  --brass: #f4e900;
+}
+
+/* Deep navy — footer */
+.surf-navy {
+  --background: #16156b;
+  --foreground: #efeadb;
+  --card: #201f7e;
+  --card-foreground: #efeadb;
+  --popover: #201f7e;
+  --popover-foreground: #efeadb;
+  --primary: #f9b0f4;
+  --primary-foreground: #3c0f38;
+  --secondary: #23228a;
+  --secondary-foreground: #efeadb;
+  --muted: #23228a;
+  --muted-foreground: #b9b6e6;
+  --accent: #23228a;
+  --accent-foreground: #efeadb;
+  --border: color-mix(in oklab, #f9b0f4 30%, transparent);
+  --input: color-mix(in oklab, #efeadb 20%, transparent);
+  --ring: #f9b0f4;
+  --brass: #f9b0f4;
 }
 
 .surf-blue {
@@ -162,6 +215,13 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-brass: var(--brass);
+  --color-royal: var(--royal);
+  --color-chartreuse: var(--chartreuse);
+  --color-ribbon: var(--ribbon);
+  --color-gold: var(--gold);
+  --color-star: var(--star);
+  --color-pinkcard: var(--pinkcard);
+  --color-navy: var(--navy);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -169,6 +229,8 @@
   --radius-xl: calc(var(--radius) + 6px);
 
   --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
+  --font-hand: var(--font-hand), cursive;
   --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono-coord), ui-monospace, monospace;
 }
@@ -239,9 +301,46 @@
 @layer utilities {
   .display {
     font-family: var(--font-display);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    line-height: 0.98;
+  }
+
+  /* Geometric bold-italic section headings ("OUR SERVICES") */
+  .head-italic {
+    font-family: var(--font-heading);
     font-weight: 800;
-    letter-spacing: -0.035em;
-    line-height: 0.95;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+
+  /* Green marker swipe under a word (hero "EVERYDAY.") */
+  .marker {
+    position: relative;
+    white-space: nowrap;
+  }
+  .marker::after {
+    content: "";
+    position: absolute;
+    left: -0.06em;
+    right: -0.06em;
+    bottom: -0.06em;
+    height: 0.16em;
+    background: #34a06b;
+    transform: skewX(-16deg);
+    border-radius: 2px;
+  }
+
+  /* Halftone dot texture for the chartreuse band */
+  .halftone {
+    background-image: radial-gradient(
+      rgba(0, 0, 0, 0.1) 1.2px,
+      transparent 1.4px
+    );
+    background-size: 13px 13px;
   }
   .text-brass {
     color: var(--brass);
@@ -349,6 +448,63 @@
   .kenburns {
     transform-origin: center;
     animation: kenburns 26s ease-in-out infinite alternate;
+  }
+
+  /* Intro splash: letters rise in, whole overlay lifts away */
+  @keyframes intro-letter {
+    from {
+      opacity: 0;
+      transform: translateY(0.55em) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  .intro-letter {
+    display: inline-block;
+    opacity: 0;
+    animation: intro-letter 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  @keyframes intro-out {
+    to {
+      opacity: 0;
+      transform: scale(1.05);
+    }
+  }
+  .intro-out {
+    animation: intro-out 0.65s ease-in forwards;
+  }
+
+  /* Red ribbon draw-in */
+  @keyframes ribbon-draw {
+    from {
+      stroke-dashoffset: 1;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  .ribbon-path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: ribbon-draw 1.9s cubic-bezier(0.6, 0.05, 0.3, 1) 0.35s forwards;
+  }
+
+  /* Focused/grayed process steps */
+  .step-dim {
+    filter: grayscale(1);
+    opacity: 0.42;
+    transition:
+      filter 0.6s ease,
+      opacity 0.6s ease;
+  }
+  .step-live {
+    filter: none;
+    opacity: 1;
+    transition:
+      filter 0.6s ease,
+      opacity 0.6s ease;
   }
 
   /* Glassmorphism card — self-contained light panel (dark text + readable

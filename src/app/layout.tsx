@@ -1,13 +1,35 @@
 import type { Metadata } from "next";
-import { Archivo, Hanken_Grotesk, IBM_Plex_Mono } from "next/font/google";
+import {
+  Anton,
+  Poppins,
+  Caveat,
+  Hanken_Grotesk,
+  IBM_Plex_Mono,
+} from "next/font/google";
 import "./globals.css";
 
-// Plain, punchy variable grotesque. Its weight + width axes drive the
-// cursor-reactive hero headline.
-const display = Archivo({
+// Big condensed poster face — hero headline + intro wordmark.
+const display = Anton({
   variable: "--font-display",
   subsets: ["latin"],
-  axes: ["wdth"],
+  weight: "400",
+  display: "swap",
+});
+
+// Geometric headings ("OUR SERVICES", statement band) — bold + italic.
+const heading = Poppins({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+// Handwritten accent band.
+const hand = Caveat({
+  variable: "--font-hand",
+  subsets: ["latin"],
+  weight: ["600", "700"],
   display: "swap",
 });
 
@@ -47,7 +69,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased`}
+      className={`${display.variable} ${heading.variable} ${hand.variable} ${body.variable} ${mono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background text-foreground">
         {children}

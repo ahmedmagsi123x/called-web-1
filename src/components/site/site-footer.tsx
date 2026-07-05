@@ -5,7 +5,7 @@ import { Logo } from "@/components/site/logo";
 
 export function SiteFooter() {
   return (
-    <footer className="surf-blue relative overflow-hidden">
+    <footer className="surf-navy relative overflow-hidden">
       <div className="grid-survey absolute inset-0 opacity-40" aria-hidden />
       <div className="relative mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">

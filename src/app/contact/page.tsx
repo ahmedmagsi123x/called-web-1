@@ -26,7 +26,7 @@ export default function ContactPage() {
       <main className="flex-1">
         <section className="surf-blue relative overflow-hidden">
           <div className="grid-survey absolute inset-0 opacity-40" aria-hidden />
-          <div className="relative mx-auto max-w-6xl px-5 pb-10 pt-16 sm:px-8 sm:pt-20">
+          <div className="relative mx-auto max-w-6xl px-5 pb-10 pt-28 sm:px-8 sm:pt-32">
             <SectionLabel index="→" coord="THE CONVERSION POINT">
               Book a call
             </SectionLabel>
